@@ -1,9 +1,9 @@
 import Navbar from '@/components/Navbar';
-import { Poppins } from 'next/font/google';
+import { Sen } from 'next/font/google';
 import './globals.css';
 
-const fontStyle = Poppins({
-  weight: ['400', '500', '600', '700'],
+const fontStyle = Sen({
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
 });
 

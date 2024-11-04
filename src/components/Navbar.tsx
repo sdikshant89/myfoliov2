@@ -11,25 +11,25 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <div className="flex space-x-10">
-          <MenuItem setActive={setActive} active={active} item="Know More!">
+          <MenuItem setActive={setActive} active={active} item="Explore">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/web-dev">
-                <div className="flex justify-center items-center w-full">
+                <div className="flex justify-center items-center w-full text-lg">
                   About
                 </div>
               </HoveredLink>
               <HoveredLink href="/web-dev">
-                <div className="flex justify-center items-center w-full">
+                <div className="flex justify-center items-center w-full text-lg">
                   Work Ex
                 </div>
               </HoveredLink>
               <HoveredLink href="/web-dev">
-                <div className="flex justify-center items-center w-full">
+                <div className="flex justify-center items-center w-full text-lg">
                   School
                 </div>
               </HoveredLink>
               <HoveredLink href="/web-dev">
-                <div className="flex justify-center items-center w-full">
+                <div className="flex justify-center items-center w-full text-lg">
                   Certificates
                 </div>
               </HoveredLink>
