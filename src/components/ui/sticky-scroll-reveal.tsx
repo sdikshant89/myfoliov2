@@ -1,6 +1,7 @@
 'use client';
 import { cn } from '@/utils/cn';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 
 export const StickyScroll = ({
@@ -10,7 +11,9 @@ export const StickyScroll = ({
   content: {
     title: string;
     description: string;
-    content?: React.ReactNode | any;
+    org: string;
+    orgLink: string;
+    src: string;
   }[];
   contentClassName?: string;
 }) => {
@@ -39,11 +42,7 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = [
-    'rgb(24, 24, 27)',
-    'var(--black)',
-    'var(--neutral-900)',
-  ];
+  const backgroundColors = ['rgb(24, 24, 27)', 'var(--black)'];
   const linearGradients = [
     'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
     'linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))',
@@ -63,10 +62,10 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="min-h-[60rem] md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center"
+      className="min-h-[60rem] md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center scroll-pb-20"
     >
       <div className="pt-60 pb-4">
-        <h3 className="text-center text-gray-400 text-md md:text-lg font-bold">
+        <h3 className="text-center text-gray-400 text-md md:text-xl font-bold">
           Work Experience
         </h3>
         <h1 className="pt-2 text-center text-2xl md:text-6xl font-bold">
@@ -82,10 +81,10 @@ export const StickyScroll = ({
         ref={ref}
       >
         <div className="div relative flex items-start px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-2xl">
             {content.map((item, index) => (
               <div key={item.title + index} className="my-20 h-[30rem]">
-                <motion.h2
+                <motion.h1
                   initial={{
                     opacity: 0,
                   }}
@@ -95,7 +94,25 @@ export const StickyScroll = ({
                   className=" pt-10 text-2xl font-bold text-slate-100"
                 >
                   {item.title}
-                </motion.h2>
+                </motion.h1>
+                <motion.h3
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: activeCard === index ? 1 : 0.3,
+                  }}
+                  className="text-lg font-semibold text-gray-400"
+                >
+                  <a
+                    href={item.orgLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {item.org}
+                  </a>
+                </motion.h3>
                 <motion.p
                   initial={{
                     opacity: 0,
@@ -103,7 +120,7 @@ export const StickyScroll = ({
                   animate={{
                     opacity: activeCard === index ? 1 : 0.3,
                   }}
-                  className="text-kg text-slate-300 max-w-sm mt-10"
+                  className="text-kg text-slate-300 max-w-md mt-4"
                 >
                   {item.description}
                 </motion.p>
@@ -111,14 +128,33 @@ export const StickyScroll = ({
             ))}
           </div>
         </div>
-        <div
-          style={{ background: backgroundGradient }}
+        {/* <div
           className={cn(
-            'hidden lg:block h-96 w-96 rounded-md bg-white sticky top-10 overflow-hidden',
+            'justify-start items-start 2xl:block top-2 sticky overflow-hidden',
             contentClassName
           )}
         >
-          {content[activeCard].content ?? null}
+          <Image
+            src="/Company-Overview-OG.png"
+            alt="Description of the image"
+            width={500}
+            height={200}
+            className="mt-20 rounded-lg"
+          />
+        </div> */}
+        <div
+          className={cn(
+            'hidden xl:block h-[290px] w-[480px] rounded-lg bg-white sticky top-24 overflow-hidden',
+            contentClassName
+          )}
+        >
+          <Image
+            src={content[activeCard].src}
+            alt="Description of the image"
+            width={500}
+            height={900}
+            className="h-full w-full"
+          />
         </div>
       </motion.div>
     </motion.div>

@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/utils/cn';
 import { useState } from 'react';
-import { HoveredLink, Menu, MenuItem } from './ui/navbar-menu';
+import { Menu, MenuItem } from './ui/navbar-menu';
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
@@ -13,26 +13,31 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex space-x-10">
           <MenuItem setActive={setActive} active={active} item="Explore">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">
+              <button>
                 <div className="flex justify-center items-center w-full text-lg">
                   About
                 </div>
-              </HoveredLink>
-              <HoveredLink href="/web-dev">
+              </button>
+              <button onClick={() => console.log('niceee')}>
                 <div className="flex justify-center items-center w-full text-lg">
                   Work Ex
                 </div>
-              </HoveredLink>
-              <HoveredLink href="/web-dev">
+              </button>
+              <button>
+                <div className="flex justify-center items-center w-full text-lg">
+                  Skills
+                </div>
+              </button>
+              <button>
                 <div className="flex justify-center items-center w-full text-lg">
                   School
                 </div>
-              </HoveredLink>
-              <HoveredLink href="/web-dev">
+              </button>
+              <button>
                 <div className="flex justify-center items-center w-full text-lg">
                   Certificates
                 </div>
-              </HoveredLink>
+              </button>
             </div>
           </MenuItem>
           <MenuItem
