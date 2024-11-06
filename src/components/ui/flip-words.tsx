@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 export const FlipWords = ({
   words,
-  duration = 4000,
+  duration = 2000,
   className,
 }: {
   words: string[];
@@ -46,7 +46,7 @@ export const FlipWords = ({
         }}
         transition={{
           type: 'spring',
-          stiffness: 100,
+          stiffness: 50,
           damping: 10,
         }}
         exit={{

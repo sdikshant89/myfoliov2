@@ -4,20 +4,23 @@
     "org": "The Chokka Center",
     "orgLink": "https://chokkacenter.com/",
     "src": "/chokka.png",
-    "description": "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity."
+    "description": "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    "skills":[ "NodeJs", "Express", "VueJs", "CouchDB", "Microservices", "SQL", "abcd", "Microservices", "SQL", "abcd"]
   },
   {
     "title": "Associate Software Engineer - I",
     "org": "Highradius Technologies",
     "orgLink": "https://www.highradius.com/",
-    "src": "/Company-Overview-OG.png",
-    "description": "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates."
+    "src": "/hrc2.png",
+    "description": "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    "skills":[ "python", "Java", "c++"]
   },
   {
     "title": "Software Developer Intern",
     "org": "Highradius Technologies",
     "orgLink": "https://chokkacenter.com/",
     "src": "/Company-Overview-OG.png",
-    "description": "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions."
+    "description": "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    "skills":[ "python", "Java", "JDBC", "Eclipse", "Javascript", "React", "Redux", "ML", "AI", "Numpy", "Pandas"]
   }
 ]

@@ -4,10 +4,11 @@ import { StickyScroll } from './ui/sticky-scroll-reveal';
 function WorkExSection() {
   type content = {
     title: string;
+    description: string;
     org: string;
     orgLink: string;
     src: string;
-    description: string;
+    skills: string[];
   };
   const content: content[] = contentJson;
 
