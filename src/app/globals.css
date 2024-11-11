@@ -8,6 +8,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: black;
+  --secondary: grey;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 2px;
+  border: 1px solid var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {

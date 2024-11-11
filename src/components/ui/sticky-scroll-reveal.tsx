@@ -1,8 +1,9 @@
 'use client';
+import DownDouble from '@/icons/arrow_down_icon.png';
 import { cn } from '@/utils/cn';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 export const StickyScroll = ({
   content,
@@ -14,15 +15,15 @@ export const StickyScroll = ({
     org: string;
     orgLink: string;
     src: string;
+    skills: string[];
   }[];
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
     container: ref,
+    //target: ref,
     offset: ['start start', 'end start'],
   });
   const cardLength = content.length;
@@ -42,27 +43,25 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = ['rgb(24, 24, 27)', 'var(--black)'];
-  const linearGradients = [
-    'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
-    'linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))',
-    'linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))',
-  ];
-
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
-  );
-
-  useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  const handleScrollDown = () => {
+    if (ref.current) {
+      ref.current.scrollBy({
+        top: 580,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <motion.div
-      animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+      initial={{ opacity: 0.0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: 0.3,
+        duration: 0.8,
+        ease: 'easeInOut',
       }}
-      className="min-h-[60rem] md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center scroll-pb-20"
+      className="min-h-[60rem] md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center top-0 overflow-hidden"
     >
       <div className="pt-60 pb-4">
         <h3 className="text-center text-gray-400 text-md md:text-xl font-bold">
@@ -73,61 +72,70 @@ export const StickyScroll = ({
         </h1>
       </div>
       <motion.div
-        animate={{
-          backgroundColor:
-            backgroundColors[activeCard % backgroundColors.length],
-        }}
-        className="h-[35rem] w-full overflow-y-auto flex justify-evenly relative space-x-10 rounded-md m-10"
+        className="h-[35rem] w-full overflow-y-auto flex justify-evenly relative space-x-20 mx-20 mt-10"
         ref={ref}
       >
-        <div className="div relative flex items-start px-4">
-          <div className="max-w-2xl">
-            {content.map((item, index) => (
-              <div key={item.title + index} className="my-20 h-[30rem]">
-                <motion.h1
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
-                  }}
-                  className=" pt-10 text-2xl font-bold text-slate-100"
+        <div className="max-w-2xl">
+          {content.map((item, index) => (
+            <div
+              key={item.title + index}
+              className="my-20 h-[30rem] px-4 relative"
+            >
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className=" pt-10 text-2xl font-bold text-white"
+              >
+                {item.title}
+              </motion.h1>
+              <motion.h3
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-lg font-semibold text-blue-500"
+              >
+                <a
+                  href={item.orgLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
                 >
-                  {item.title}
-                </motion.h1>
-                <motion.h3
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
-                  }}
-                  className="text-lg font-semibold text-gray-400"
-                >
-                  <a
-                    href={item.orgLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
+                  {item.org}
+                </a>
+              </motion.h3>
+              <motion.p
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-kg text-slate-300 mt-4"
+              >
+                {item.description}
+              </motion.p>
+              <div className="pt-4 justify-start items-center">
+                {item.skills.map((skill, skillIndex) => (
+                  <button
+                    disabled
+                    key={`${item.title}-skill-${skillIndex}`}
+                    className="px-3 py-1 mr-2 mt-2 rounded-lg border border-gray-600"
                   >
-                    {item.org}
-                  </a>
-                </motion.h3>
-                <motion.p
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
-                  }}
-                  className="text-kg text-slate-300 max-w-md mt-4"
-                >
-                  {item.description}
-                </motion.p>
+                    {skill}
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+
         {/* <div
           className={cn(
             'justify-start items-start 2xl:block top-2 sticky overflow-hidden',
@@ -144,7 +152,7 @@ export const StickyScroll = ({
         </div> */}
         <div
           className={cn(
-            'hidden xl:block h-[290px] w-[480px] rounded-lg bg-white sticky top-24 overflow-hidden',
+            'hidden xl:block h-[290px] w-[490px] rounded-lg bg-white sticky top-24 overflow-hidden',
             contentClassName
           )}
         >
@@ -153,10 +161,27 @@ export const StickyScroll = ({
             alt="Description of the image"
             width={500}
             height={900}
-            className="h-full w-full"
+            className="h-full w-full overflow-hidden"
           />
         </div>
       </motion.div>
+      <button
+        onClick={handleScrollDown}
+        className="sticky h-28 px-3 py-1 rounded-lg flex flex-col justify-start"
+      >
+        <motion.div
+          animate={{
+            y: [0, -20, 0], // Moves up and down
+          }}
+          transition={{
+            duration: 1.5, // Adjust for speed
+            repeat: Infinity, // Loop the animation
+            repeatType: 'loop', // Ensures continuous looping
+          }}
+        >
+          <Image src={DownDouble} alt="Down arrow" width={50} height={50} />
+        </motion.div>
+      </button>
     </motion.div>
   );
 };
