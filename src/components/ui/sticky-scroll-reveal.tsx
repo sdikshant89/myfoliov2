@@ -64,7 +64,7 @@ export const StickyScroll = ({
       className="min-h-[60rem] md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center top-0 overflow-hidden"
     >
       <div className="pt-60 pb-4">
-        <h3 className="text-center text-gray-400 text-md md:text-xl font-bold">
+        <h3 className="text-center dark:text-gray-400 text-black text-md md:text-xl font-bold">
           Work Experience
         </h3>
         <h1 className="pt-2 text-center text-2xl md:text-6xl font-bold">
@@ -88,7 +88,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className=" pt-10 text-2xl font-bold text-white"
+                className=" pt-10 text-2xl font-bold dark:text-white text-black"
               >
                 {item.title}
               </motion.h1>
@@ -99,7 +99,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg font-semibold text-blue-500"
+                className="text-lg font-semibold dark:text-blue-500 text-red-500"
               >
                 <a
                   href={item.orgLink}
@@ -117,7 +117,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 mt-4"
+                className="text-kg dark:text-slate-300 text-blue-600 mt-4"
               >
                 {item.description}
               </motion.p>
@@ -126,7 +126,7 @@ export const StickyScroll = ({
                   <button
                     disabled
                     key={`${item.title}-skill-${skillIndex}`}
-                    className="px-3 py-1 mr-2 mt-2 rounded-lg border border-gray-600"
+                    className="px-3 py-1 mr-2 mt-2 rounded-lg border border-gray-600 dark:text-white text-black"
                   >
                     {skill}
                   </button>

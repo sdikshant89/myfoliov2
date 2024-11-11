@@ -1,3 +1,4 @@
+'use client';
 import Navbar from '@/components/Navbar';
 import { Sen } from 'next/font/google';
 import './globals.css';

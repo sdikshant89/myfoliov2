@@ -35,10 +35,10 @@ function IntroSection() {
       >
         <div className="min-h-[55rem] md:h-[40rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
           <div className="p-4 relative z-10 w-full text-center">
-            <h1 className="text-white mt-20 md:mt-0 text-4xl md:text-8xl font-bold">
+            <h1 className="dark:text-white text-black mt-20 md:mt-0 text-4xl md:text-8xl font-bold">
               I'm <FlipWords words={names} />
             </h1>
-            <p className="mt-6 text-base md:text-lg text-white max-w-xl mx-auto">
+            <p className="mt-6 text-base md:text-lg dark:text-white text-blue-600 max-w-xl mx-auto">
               A <b>Full Stack Developer</b> with hands-on experience in crafting
               end to end scalable web applications. Proficient in both frontend
               and backend technologies, committed to continuous learning and

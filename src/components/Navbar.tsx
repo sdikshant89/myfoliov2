@@ -50,8 +50,54 @@ function Navbar({ className }: { className?: string }) {
             active={active}
             item="Say Hi!"
           ></MenuItem>
+
+          {/* <a
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center"
+          >
+            <Image src={LinkIcon} alt="Python" className="w-7 h-6" />
+          </a>
+
+          <a
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center"
+          >
+            <Image src={GitIcon} alt="Python" className="w-6 h-6" />
+          </a> */}
         </div>
       </Menu>
+      {/* <div className="absolute flex flex-row -right-full justify-end top-1/2 transform -translate-y-1/2 w-[200px]">
+        <span className="flex items-center justify-center w-[75px] h-[75px] rounded-full bg-black mx-5">
+          <a
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={GitIcon}
+              alt="Python"
+              className="w-[20px] h-[20px] hover:w-9 hover:h-9 transition-all duration-300"
+            />
+          </a>
+        </span>
+        <span className="flex items-center justify-center w-[75px] h-[75px] rounded-full bg-black">
+          <a
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={GitIcon}
+              alt="Python"
+              className="w-[20px] h-[20px] hover:w-9 hover:h-9 transition-all duration-300"
+            />
+          </a>
+        </span>
+      </div> */}
     </div>
   );
 }
