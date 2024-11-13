@@ -40,14 +40,14 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
-      <motion.p
+    <div onMouseEnter={() => setActive(item)} className="relative">
+      <motion.div
         transition={{ duration: 0.3 }}
         className="w-28 cursor-pointer text-black hover:opacity-[0.9] hover:font-bold dark:text-white font-medium text-lg flex justify-evenly items-center hover:scale-[1.05] transition-all duration-300"
       >
         <div>{item}</div>
         <Image src={getIcon(item)} className="w-5 h-5" alt="Python"></Image>
-      </motion.p>
+      </motion.div>
       {active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}

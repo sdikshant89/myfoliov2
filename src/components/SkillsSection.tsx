@@ -14,6 +14,7 @@ function SkillsSection() {
         duration: 0.8,
         ease: 'easeInOut',
       }}
+      id="skillSection"
       className="min-h-[80rem] md:min-h-[60rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
     >
       <div className="pt-28 z-30">

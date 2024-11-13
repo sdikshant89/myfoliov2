@@ -3,7 +3,13 @@ import { cn } from '@/utils/cn';
 import { useState } from 'react';
 import { Menu, MenuItem } from './ui/navbar-menu';
 
-function Navbar({ className }: { className?: string }) {
+function Navbar({
+  className,
+  scrollToSection,
+}: {
+  className?: string;
+  scrollToSection: any;
+}) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
@@ -18,12 +24,12 @@ function Navbar({ className }: { className?: string }) {
                   About
                 </div>
               </button>
-              <button>
+              <button onClick={() => scrollToSection('WorkExSection')}>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   Work Ex
                 </div>
               </button>
-              <button>
+              <button onClick={() => scrollToSection('skillSection')}>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   Skills
                 </div>
@@ -71,6 +77,19 @@ function Navbar({ className }: { className?: string }) {
               >
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   Github
+                </div>
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    'https://github.com/sdikshant89',
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+              >
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
+                  Old Portfolio
                 </div>
               </button>
             </div>

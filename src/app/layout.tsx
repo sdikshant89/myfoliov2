@@ -13,12 +13,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <html lang="en" className={`${fontStyle.className} dark`}>
       <title>Dikshant Sharma</title>
       <body className={`antialiased`}>
         <div className="relative w-full flex items-center justify-center">
-          <Navbar />
+          <Navbar scrollToSection={scrollToSection} />
         </div>
         {children}
       </body>
