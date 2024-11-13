@@ -7,34 +7,34 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn('fixed top-16 inset-x-0 max-w-md mx-auto z-50', className)}
+      className={cn('fixed top-16 inset-x-0 max-w-xl mx-auto z-50', className)}
     >
       <Menu setActive={setActive}>
-        <div className="flex space-x-10">
+        <div className="flex space-x-5">
           <MenuItem setActive={setActive} active={active} item="Explore">
             <div className="flex flex-col space-y-4 text-sm">
               <button>
-                <div className="flex justify-center items-center w-full text-lg">
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   About
                 </div>
               </button>
-              <button onClick={() => console.log('niceee')}>
-                <div className="flex justify-center items-center w-full text-lg">
+              <button>
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   Work Ex
                 </div>
               </button>
               <button>
-                <div className="flex justify-center items-center w-full text-lg">
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   Skills
                 </div>
               </button>
               <button>
-                <div className="flex justify-center items-center w-full text-lg">
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   School
                 </div>
               </button>
               <button>
-                <div className="flex justify-center items-center w-full text-lg">
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   Certificates
                 </div>
               </button>
@@ -45,6 +45,36 @@ function Navbar({ className }: { className?: string }) {
             active={active}
             item="Projects"
           ></MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Socials">
+            <div className="flex flex-col space-y-4 text-sm">
+              <button
+                onClick={() =>
+                  window.open(
+                    'https://www.linkedin.com/in/dikshant-sharma-/',
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+              >
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
+                  Linkedin
+                </div>
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    'https://github.com/sdikshant89',
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+              >
+                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
+                  Github
+                </div>
+              </button>
+            </div>
+          </MenuItem>
           <MenuItem
             setActive={setActive}
             active={active}

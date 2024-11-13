@@ -1,4 +1,8 @@
 'use client';
+import HandWave from '@/icons/hi.gif';
+import ProfileIcon from '@/icons/profile.png';
+import ProjectIcon from '@/icons/project_icon.png';
+import SearchIcon from '@/icons/search.png';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,6 +16,17 @@ const transition = {
   restDelta: 0.001,
   restSpeed: 0.001,
 };
+
+function getIcon(item: string): any {
+  if (item === 'Explore') return SearchIcon;
+  else if (item === 'Projects') {
+    return ProjectIcon;
+  } else if (item === 'Socials') {
+    return ProfileIcon;
+  } else if (item === 'Say Hi!') {
+    return HandWave;
+  }
+}
 
 export const MenuItem = ({
   setActive,
@@ -28,9 +43,10 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white font-medium text-lg"
+        className="w-28 cursor-pointer text-black hover:opacity-[0.9] hover:font-bold dark:text-white font-medium text-lg flex justify-evenly items-center hover:scale-[1.05] transition-all duration-300"
       >
-        {item}
+        <div>{item}</div>
+        <Image src={getIcon(item)} className="w-5 h-5" alt="Python"></Image>
       </motion.p>
       {active !== null && (
         <motion.div

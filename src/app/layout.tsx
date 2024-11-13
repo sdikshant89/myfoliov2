@@ -15,6 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fontStyle.className} dark`}>
+      <title>Dikshant Sharma</title>
       <body className={`antialiased`}>
         <div className="relative w-full flex items-center justify-center">
           <Navbar />
