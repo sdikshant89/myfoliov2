@@ -39,6 +39,15 @@ export const MenuItem = ({
   item: string;
   children?: React.ReactNode;
 }) => {
+  const [isWideScreen, setIsWideScreen] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    const checkScreenWidth = () => setIsWideScreen(window.innerWidth > 500);
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+    return () => window.removeEventListener('resize', checkScreenWidth);
+  }, []);
+
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.div
@@ -46,7 +55,9 @@ export const MenuItem = ({
         className="w-28 cursor-pointer text-black hover:opacity-[0.9] hover:font-bold dark:text-white font-medium text-lg flex justify-evenly items-center hover:scale-[1.05] transition-all duration-300"
       >
         <div>{item}</div>
-        <Image src={getIcon(item)} className="w-5 h-5" alt="Python"></Image>
+        {isWideScreen && (
+          <Image src={getIcon(item)} className="w-5 h-5" alt="Python" />
+        )}
       </motion.div>
       {active !== null && (
         <motion.div

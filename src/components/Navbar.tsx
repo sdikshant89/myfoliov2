@@ -16,7 +16,7 @@ function Navbar({
       className={cn('fixed top-16 inset-x-0 max-w-xl mx-auto z-50', className)}
     >
       <Menu setActive={setActive}>
-        <div className="flex space-x-5">
+        <div className="flex sm:space-x-0 md:space-x-5">
           <MenuItem setActive={setActive} active={active} item="Explore">
             <div className="flex flex-col space-y-4 text-sm">
               <button>
