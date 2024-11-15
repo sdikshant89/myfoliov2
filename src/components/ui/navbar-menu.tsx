@@ -56,7 +56,7 @@ export const MenuItem = ({
       >
         <div>{item}</div>
         {isWideScreen && (
-          <Image src={getIcon(item)} className="w-5 h-5" alt="Python" />
+          <Image src={getIcon(item)} className="w-5 h-5" alt="icon" />
         )}
       </motion.div>
       {active !== null && (
@@ -70,7 +70,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="backdrop-blur-dropdown rounded-2xl overflow-hidden shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -94,7 +94,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative scale-245 rounded-full dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
+      className="relative scale-245 rounded-full backdrop-blur-nav shadow-input flex justify-center space-x-4 px-8 py-6"
     >
       {children}
     </nav>

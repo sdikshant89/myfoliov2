@@ -38,3 +38,31 @@ body {
   background: var(--background);
   font-family: Sen, Poppins, Arial, Helvetica, sans-serif;
 }
+
+.backdrop-blur-nav::before {
+  will-change: backdrop-filter;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+  border-radius: 9999px;
+}
+
+.backdrop-blur-dropdown::after {
+  will-change: backdrop-filter;
+  content: '';
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+  border-radius: 1rem;
+}
