@@ -1,8 +1,32 @@
 'use client';
 //import { Card } from './ui/skills-card';
 import { motion } from 'framer-motion';
-import { BackgroundBeams } from './ui/background-beams';
-import HoverCard from './ui/skills-card';
+import { IconCloud } from './ui/icon-cloud';
+
+const slugs = [
+  'typescript',
+  'javascript',
+  'java',
+  'react',
+  'html5',
+  'css3',
+  'cplusplus',
+  'mysql',
+  'nodedotjs',
+  'express',
+  'python',
+  'vuedotjs',
+  'nextdotjs',
+  'postgresql',
+  'git',
+  'jira',
+  'visualstudiocode',
+  'dotnet',
+  'springboot',
+  'junit5',
+  'unity',
+  'figma',
+];
 
 function SkillsSection() {
   return (
@@ -31,9 +55,8 @@ function SkillsSection() {
           every stage.{' '}
         </p>
       </div>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8 font">
-        <HoverCard />
-        <BackgroundBeams />
+      <div className="flex w-full my-14 mx-16 items-center justify-between">
+        <IconCloud iconSlugs={slugs} />
         {/* <Card
           title="Sheetal is Nisha"
           icon={
