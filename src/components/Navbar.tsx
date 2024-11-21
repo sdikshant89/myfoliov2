@@ -13,7 +13,10 @@ function Navbar({
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn('fixed top-16 inset-x-0 max-w-xl mx-auto z-50', className)}
+      className={cn(
+        'fixed top-16 inset-x-0 sm:w-md md:max-w-xl mx-auto z-50',
+        className
+      )}
     >
       <Menu setActive={setActive}>
         <div className="flex sm:space-x-0 md:space-x-5">

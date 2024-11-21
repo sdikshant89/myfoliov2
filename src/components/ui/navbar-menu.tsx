@@ -52,7 +52,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.div
         transition={{ duration: 0.3 }}
-        className="w-28 cursor-pointer text-black hover:opacity-[0.9] hover:font-bold dark:text-white font-medium text-lg flex justify-evenly items-center hover:scale-[1.05] transition-all duration-300"
+        className="sm:w-28 w-20 cursor-pointer text-black hover:opacity-[0.9] hover:font-bold dark:text-white font-medium text-lg flex justify-evenly items-center hover:scale-[1.05] transition-all duration-300"
       >
         <div>{item}</div>
         {isWideScreen && (
