@@ -1,5 +1,7 @@
 import mySkills from '@/data/techSkills.json';
+import PyIcon from '@/icons/LI-In-Bug.png';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { IconCloud } from './ui/icon-cloud';
 
 const slugs = [
@@ -44,9 +46,9 @@ function SkillsSection() {
         ease: 'easeInOut',
       }}
       id="skillSection"
-      className="max-h-[60rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
+      className="max-h-[70rem] w-full rounded-md flex flex-col item-center justify-center overflow-auto mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
     >
-      <div className="pt-28">
+      <div className="pt-20">
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
           Skillset
         </h3>
@@ -60,13 +62,25 @@ function SkillsSection() {
           every stage.{' '}
         </p>
       </div>
-      <div className="flex my-14 mx-12 items-center justify-center">
+      <div className="flex my-10 mx-8 items-center justify-center mb-28">
         <div className="w-1/2 flex flex-col">
-          {mySkillsArry.map((item, index) => (
-            <div>
-              <h1 className="pt-2 text-start text-2xl md:text-2xl font-bold">
+          {mySkillsArry.map((item) => (
+            <div className="my-2">
+              <h1 className="py-2 text-start text-3xl md:text-2xl font-bold text-white">
                 {item.skillHead}
               </h1>
+              <div>
+                <button className="rounded-lg border-2 border-gray-600 text-gray-400 group/modal-btn flex justify-center  items-center px-2 py-2 relative overflow-hidden">
+                  <Image
+                    src={PyIcon}
+                    alt="Python"
+                    className="-translate-x-40 group-hover/modal-btn:translate-x-0 w-6 h-5 transition duration-500 flex items-center justify-center absolute inset-auto"
+                  />
+                  <span className="group-hover/modal-btn:translate-x-40 transition duration-500 text-white">
+                    abcsdf
+                  </span>
+                </button>
+              </div>
             </div>
           ))}
         </div>
