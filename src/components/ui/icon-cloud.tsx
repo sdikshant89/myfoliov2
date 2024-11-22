@@ -10,6 +10,29 @@ import {
   SimpleIcon,
 } from 'react-icon-cloud';
 
+export const useResponsiveMaxWidth = () => {
+  const [maxWidth, setMaxWidth] = useState('35vh');
+
+  useEffect(() => {
+    const updateMaxWidth = () => {
+      if (window.innerWidth > 1300) {
+        setMaxWidth('45vh');
+      } else {
+        setMaxWidth('35vh');
+      }
+    };
+
+    updateMaxWidth();
+    window.addEventListener('resize', updateMaxWidth);
+
+    return () => {
+      window.removeEventListener('resize', updateMaxWidth);
+    };
+  }, []);
+
+  return maxWidth;
+};
+
 export const cloudProps: Omit<ICloud, 'children'> = {
   containerProps: {
     style: {
@@ -65,6 +88,7 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
   const { theme } = useTheme();
+  const maxWidth = useResponsiveMaxWidth();
 
   useEffect(() => {
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
@@ -80,7 +104,12 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
 
   return (
     // @ts-ignore
-    <Cloud {...cloudProps}>
+    <Cloud
+      {...cloudProps}
+      canvasProps={{
+        style: { maxWidth },
+      }}
+    >
       <>{renderedIcons}</>
     </Cloud>
   );

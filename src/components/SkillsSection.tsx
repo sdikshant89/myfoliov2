@@ -1,5 +1,4 @@
-'use client';
-//import { Card } from './ui/skills-card';
+import mySkills from '@/data/techSkills.json';
 import { motion } from 'framer-motion';
 import { IconCloud } from './ui/icon-cloud';
 
@@ -29,6 +28,12 @@ const slugs = [
 ];
 
 function SkillsSection() {
+  type mySkillsType = {
+    skillHead: string;
+    IconsArray: string[];
+  };
+  const mySkillsArry: mySkillsType[] = mySkills;
+
   return (
     <motion.div
       initial={{ opacity: 0.0, y: 40 }}
@@ -39,9 +44,9 @@ function SkillsSection() {
         ease: 'easeInOut',
       }}
       id="skillSection"
-      className="min-h-[80rem] md:min-h-[60rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
+      className="max-h-[60rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
     >
-      <div className="pt-28 z-30">
+      <div className="pt-28">
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
           Skillset
         </h3>
@@ -55,28 +60,19 @@ function SkillsSection() {
           every stage.{' '}
         </p>
       </div>
-      <div className="flex w-full my-14 mx-16 items-center justify-between">
-        <IconCloud iconSlugs={slugs} />
-        {/* <Card
-          title="Sheetal is Nisha"
-          icon={
-            <h2 className="font-semibold text-3xl text-orange-500">
-              Languages and Frameworks
-            </h2>
-          }
-        ></Card>
-        <Card
-          title="Nisha is Munni"
-          icon={
-            <h2 className="font-semibold text-3xl text-blue-500">Backend</h2>
-          }
-        ></Card>
-        <Card
-          title="Munni is Aditi"
-          icon={
-            <h2 className="font-semibold text-3xl text-yellow-500">Frontend</h2>
-          }
-        ></Card> */}
+      <div className="flex my-14 mx-12 items-center justify-center">
+        <div className="w-1/2 flex flex-col">
+          {mySkillsArry.map((item, index) => (
+            <div>
+              <h1 className="pt-2 text-start text-2xl md:text-2xl font-bold">
+                {item.skillHead}
+              </h1>
+            </div>
+          ))}
+        </div>
+        <div className="hidden lg:block">
+          <IconCloud iconSlugs={slugs} />
+        </div>
       </div>
     </motion.div>
   );

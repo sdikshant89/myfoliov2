@@ -1,0 +1,14 @@
+[
+    {
+        "skillHead": "Frontend",
+        "IconsArray": ["abc", "def"]
+    },
+    {
+        "skillHead": "Backend",
+        "IconsArray": ["abc", "def"]
+    },
+    {
+        "skillHead": "Misc",
+        "IconsArray": ["abc", "def"]
+    }
+]
