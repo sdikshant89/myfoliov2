@@ -1,7 +1,17 @@
 import mySkills from '@/data/techSkills.json';
-import PyIcon from '@/icons/LI-In-Bug.png';
+import VueIcon from '@/icons/skills/Vue.png';
 import { motion } from 'framer-motion';
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
+import CSSIcon from '../icons/skills/css.png';
+import ExtIcon from '../icons/skills/extjs.png';
+import HTMLIcon from '../icons/skills/html.png';
+import JiraIcon from '../icons/skills/jira.png';
+import JSIcon from '../icons/skills/js.png';
+import NextIcon from '../icons/skills/nextjs.png';
+import ReactIcon from '../icons/skills/react.png';
+import TailwindIcon from '../icons/skills/Tailwind.png';
+import TypeIcon from '../icons/skills/typescript.png';
 import { IconCloud } from './ui/icon-cloud';
 
 const slugs = [
@@ -28,6 +38,22 @@ const slugs = [
   'unity',
   'figma',
 ];
+
+const skillIconMap: Record<string, StaticImageData> = {
+  NextJs: NextIcon,
+  ReactJs: ReactIcon,
+  VueJs: VueIcon,
+  ExtJs: ExtIcon,
+  Typescript: TypeIcon,
+  Javascript: JSIcon,
+  HTML5: HTMLIcon,
+  TailwindCSS: TailwindIcon,
+  CSS: CSSIcon,
+};
+
+function getSkillIcon(name: string): StaticImageData {
+  return skillIconMap[name] || JiraIcon;
+}
 
 function SkillsSection() {
   type mySkillsType = {
@@ -64,22 +90,27 @@ function SkillsSection() {
       </div>
       <div className="flex my-10 mx-8 items-center justify-center mb-28">
         <div className="w-1/2 flex flex-col">
-          {mySkillsArry.map((item) => (
-            <div className="my-2">
-              <h1 className="py-2 text-start text-3xl md:text-2xl font-bold text-white">
+          {mySkillsArry.map((item, index) => (
+            <div key={`skillset-${index}`} className="my-2">
+              <h1 className="py-2 text-start text-5xl md:text-3xl font-bold text-gray-400">
                 {item.skillHead}
               </h1>
-              <div>
-                <button className="rounded-lg border-2 border-gray-600 text-gray-400 group/modal-btn flex justify-center  items-center px-2 py-2 relative overflow-hidden">
-                  <Image
-                    src={PyIcon}
-                    alt="Python"
-                    className="-translate-x-40 group-hover/modal-btn:translate-x-0 w-6 h-5 transition duration-500 flex items-center justify-center absolute inset-auto"
-                  />
-                  <span className="group-hover/modal-btn:translate-x-40 transition duration-500 text-white">
-                    abcsdf
-                  </span>
-                </button>
+              <div className="flex flex-wrap justify-start items-center gap-x-1 gap-y-2">
+                {item.IconsArray.map((childitem, index) => (
+                  <button
+                    key={`icon-${index}-${childitem}`}
+                    className="rounded-lg border-2 border-gray-600 text-gray-400 group/modal-btn flex justify-center  items-center px-2 py-2 relative overflow-hidden"
+                  >
+                    <Image
+                      src={getSkillIcon(childitem)}
+                      alt="Python"
+                      className="-translate-x-40 group-hover/modal-btn:translate-x-0 w-6 h-5 transition duration-500 flex items-center justify-center absolute inset-auto"
+                    />
+                    <span className="group-hover/modal-btn:translate-x-40 transition duration-500 text-white">
+                      {childitem}
+                    </span>
+                  </button>
+                ))}
               </div>
             </div>
           ))}

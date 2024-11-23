@@ -1,14 +1,14 @@
 [
     {
         "skillHead": "Frontend",
-        "IconsArray": ["abc", "def"]
+        "IconsArray": ["NextJs","ReactJs","VueJs","Typescript","Javascript","HTML5","TailwindCSS","CSS","ExtJs"]
     },
     {
         "skillHead": "Backend",
-        "IconsArray": ["abc", "def"]
+        "IconsArray": ["ExpressJs","NodeJs","Java","Hibernate"]
     },
     {
         "skillHead": "Misc",
-        "IconsArray": ["abc", "def"]
+        "IconsArray": ["Python","skillName"]
     }
 ]
