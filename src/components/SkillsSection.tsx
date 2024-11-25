@@ -1,9 +1,9 @@
-import skillIconMap from '@/data/SkillIconMap';
+import { skillIconMap } from '@/data/SkillIconMap';
 import mySkills from '@/data/techSkills.json';
+import ExIcon from '@/icons/exclamation.png';
 import { motion } from 'framer-motion';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
-import JiraIcon from '../icons/skills/jira.png';
 import { IconCloud } from './ui/icon-cloud';
 
 const slugs = [
@@ -32,7 +32,7 @@ const slugs = [
 ];
 
 function getSkillIcon(name: string): StaticImageData {
-  return skillIconMap[name] || JiraIcon;
+  return skillIconMap[name] || ExIcon;
 }
 
 function SkillsSection() {
@@ -83,6 +83,8 @@ function SkillsSection() {
               <div className="flex flex-wrap justify-start items-center gap-x-1 gap-y-2">
                 {item.IconsArray.map((childitem, index) => (
                   <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={childitem.hyperlink}
                     key={`icon-${index}-${childitem.iconName}`}
                   >

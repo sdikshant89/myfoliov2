@@ -26,7 +26,7 @@ import SpIcon from '../icons/skills/springBoot.png';
 import TailwindIcon from '../icons/skills/Tailwind.png';
 import TypeIcon from '../icons/skills/typescript.png';
 
-const skillIconMap: Record<string, StaticImageData> = {
+export const skillIconMap: Record<string, StaticImageData> = {
   //Frontend
   NextJs: NextIcon,
   ReactJs: ReactIcon,
@@ -60,5 +60,3 @@ const skillIconMap: Record<string, StaticImageData> = {
   VisualStudio: VSCodeIcon,
   MATLAB: MatlabIcon,
 };
-
-export default skillIconMap;

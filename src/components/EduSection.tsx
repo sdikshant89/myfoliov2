@@ -1,6 +1,10 @@
 'use client';
+
+import UofAIcon from '@/icons/UofA.png';
+import KIITIcon from '@/icons/kiitLogo.png';
 import { cn } from '@/utils/cn';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { BackgroundBeams } from './ui/background-beams';
 
 interface BlurIntProps {
@@ -11,27 +15,34 @@ interface BlurIntProps {
     visible: { filter: string; opacity: number };
   };
   duration?: number;
+  hpLink: string;
 }
-const BlurIn = ({ word, className, variant, duration = 1 }: BlurIntProps) => {
+const BlurIn = ({
+  word,
+  className,
+  variant,
+  duration = 1,
+  hpLink,
+}: BlurIntProps) => {
   const defaultVariants = {
-    hidden: { filter: 'blur(10px)', opacity: 0 },
+    hidden: { filter: 'blur(20px)', opacity: 0 },
     visible: { filter: 'blur(0px)', opacity: 1 },
   };
   const combinedVariants = variant || defaultVariants;
 
   return (
-    <motion.h1
+    <motion.a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={hpLink}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
       transition={{ duration }}
       variants={combinedVariants}
-      className={cn(
-        'font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]',
-        className
-      )}
+      className={cn('z-20 tracking-[-0.02em] drop-shadow-sm ', className)}
     >
       {word}
-    </motion.h1>
+    </motion.a>
   );
 };
 
@@ -46,17 +57,60 @@ function EducationSection() {
         ease: 'easeInOut',
       }}
       id="educationSection"
-      className="relative max-h-[70rem] w-full rounded-md flex flex-col item-center justify-center mx-auto py-20 bg-black"
+      className="relative h-70 md:h-90 w-full rounded-md flex flex-col item-center justify-center px-20 py-40 bg-black"
     >
-      <div className="py-20">
+      <div className="py-12">
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
           Schooling
         </h3>
         <h1 className="pt-2 text-center text-4xl md:text-6xl font-bold">
-          The Chapters of My Education
+          Chapters of My Education
         </h1>
       </div>
-      <div className="h-40"></div>
+      <div className="w-full py-5 px-10 flex flex-col gap-y-16 md:gap-y-10">
+        <div className="flex justify-center md:justify-start items-center text-center md:text-left">
+          <Image
+            src={UofAIcon}
+            alt="Python"
+            className="w-48 h-48 hidden md:block"
+          />
+          <div className="flex flex-col gap-y-2 px-2">
+            <BlurIn
+              word="University of Alberta"
+              duration={2}
+              className="text-4xl md:text-5xl text-yellow-500 font-bold"
+              hpLink="https://www.ualberta.ca/en/index.html"
+            />
+            <h3 className="text-xl md:text-2xl text-white font-medium">
+              Master's of Science in Computer Science - Multimedia
+            </h3>
+            <h3 className="text-xl md:text-2xl text-gray-500 font-medium">
+              Sept. 2023 - Jan. 2025
+            </h3>
+          </div>
+        </div>
+        <div className="flex justify-center md:justify-end items-center text-center md:text-right">
+          <div className="flex flex-col gap-y-2 px-5">
+            <BlurIn
+              word="KIIT University"
+              duration={2}
+              className="text-4xl md:text-5xl text-yellow-500 font-bold"
+              hpLink="https://kiit.ac.in/"
+            />
+            <h3 className="text-xl md:text-2xl text-white font-medium">
+              Bachelor's in Technology (Computer Engineering - I.T.)
+            </h3>
+            <h3 className="text-xl md:text-2xl text-gray-500 font-medium">
+              July 2018 - May 2022
+            </h3>
+          </div>
+          <Image
+            src={KIITIcon}
+            alt="Python"
+            className="w-48 h-40 hidden md:block"
+          />
+        </div>
+      </div>
       <BackgroundBeams />
     </motion.div>
   );
