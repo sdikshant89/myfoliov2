@@ -56,9 +56,14 @@ function getSkillIcon(name: string): StaticImageData {
 }
 
 function SkillsSection() {
+  type nestedSkillArrType = {
+    iconName: string;
+    hyperlink: string;
+  };
+
   type mySkillsType = {
     skillHead: string;
-    IconsArray: string[];
+    IconsArray: nestedSkillArrType[];
   };
   const mySkillsArry: mySkillsType[] = mySkills;
 
@@ -72,7 +77,7 @@ function SkillsSection() {
         ease: 'easeInOut',
       }}
       id="skillSection"
-      className="max-h-[70rem] w-full rounded-md flex flex-col item-center justify-center overflow-auto mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
+      className="max-h-[70rem] w-full rounded-md flex flex-col item-center justify-center mx-auto mt-20 bg-gradient-to-b from-[rgb(24,24,27)] to-black"
     >
       <div className="pt-20">
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
@@ -88,28 +93,32 @@ function SkillsSection() {
           every stage.{' '}
         </p>
       </div>
-      <div className="flex my-10 mx-8 items-center justify-center mb-28">
-        <div className="w-1/2 flex flex-col">
+      <div className="flex my-10 mx-8 items-center sm:justify-evenly justify-start mb-28">
+        <div className="sm:w-1/2 flex flex-col">
           {mySkillsArry.map((item, index) => (
             <div key={`skillset-${index}`} className="my-2">
-              <h1 className="py-2 text-start text-5xl md:text-3xl font-bold text-gray-400">
+              <h1 className="py-2 text-start text-2xl md:text-3xl font-semibold text-gray-400">
                 {item.skillHead}
               </h1>
               <div className="flex flex-wrap justify-start items-center gap-x-1 gap-y-2">
                 {item.IconsArray.map((childitem, index) => (
-                  <button
-                    key={`icon-${index}-${childitem}`}
-                    className="rounded-lg border-2 border-gray-600 text-gray-400 group/modal-btn flex justify-center  items-center px-2 py-2 relative overflow-hidden"
+                  <a
+                    href={childitem.hyperlink}
+                    key={`icon-${index}-${childitem.iconName}`}
                   >
-                    <Image
-                      src={getSkillIcon(childitem)}
-                      alt="Python"
-                      className="-translate-x-40 group-hover/modal-btn:translate-x-0 w-6 h-5 transition duration-500 flex items-center justify-center absolute inset-auto"
-                    />
-                    <span className="group-hover/modal-btn:translate-x-40 transition duration-500 text-white">
-                      {childitem}
-                    </span>
-                  </button>
+                    <button className="rounded-lg border-2 border-gray-600 text-gray-400 group/modal-btn flex justify-center  items-center px-2 py-2 relative overflow-hidden hover:scale-125 hover:border-blue-400 transition-all duration-300">
+                      <Image
+                        src={getSkillIcon(
+                          childitem.iconName.replace(/[_\.]/g, '')
+                        )}
+                        alt="Python"
+                        className="-translate-x-40 group-hover/modal-btn:translate-x-0 w-7 h-6 transition duration-500 flex items-center justify-center absolute inset-auto"
+                      />
+                      <span className="group-hover/modal-btn:translate-x-40 transition duration-500 text-white text-sm sm:text-base">
+                        {childitem.iconName.replace('_', ' ')}
+                      </span>
+                    </button>
+                  </a>
                 ))}
               </div>
             </div>

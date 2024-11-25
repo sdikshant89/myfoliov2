@@ -1,14 +1,125 @@
 [
     {
         "skillHead": "Frontend",
-        "IconsArray": ["NextJs","ReactJs","VueJs","Typescript","Javascript","HTML5","TailwindCSS","CSS","ExtJs"]
+        "IconsArray": [
+            {
+                "iconName":"Next.Js",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"React.Js",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Redux",
+                "hyperlink":"https://redux.js.org/"
+            },
+            {
+                "iconName":"Vue.Js",
+                "hyperlink":"https://vuejs.org/"
+            },
+            {
+                "iconName":"Typescript",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Figma",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"HTML5",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Tailwind_CSS",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"CSS",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"ExtJs",
+                "hyperlink":"https://nextjs.org/"
+            }    
+        ]
     },
     {
         "skillHead": "Backend",
-        "IconsArray": ["ExpressJs","NodeJs","Java","Hibernate"]
+        "IconsArray": [
+            {
+                "iconName":"ExpressJs",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"NodeJs",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Spring_Boot",
+                "hyperlink":"https://redux.js.org/"
+            },
+            {
+                "iconName":"JPA/Hibernate",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"C#_.Net",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"Java",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Junit",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"SQL",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"MongoDB",
+                "hyperlink":"https://react.dev/"
+            }    
+        ]
     },
     {
-        "skillHead": "Misc",
-        "IconsArray": ["Python","skillName"]
+        "skillHead": "Misc Devtools",
+        "IconsArray": [
+            {
+                "iconName":"Python",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"Unity",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"Git",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Agile",
+                "hyperlink":"https://react.dev/"
+            },
+            {
+                "iconName":"Scrum",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"Visual_Studio",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"Jira",
+                "hyperlink":"https://nextjs.org/"
+            },
+            {
+                "iconName":"MATLAB",
+                "hyperlink":"https://nextjs.org/"
+            }
+        ]
     }
 ]
