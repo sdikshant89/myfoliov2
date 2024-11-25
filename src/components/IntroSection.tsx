@@ -22,7 +22,7 @@ function IntroSection() {
     'a Tech Enthusiast',
   ];
   return (
-    <AuroraBackground>
+    <AuroraBackground id="introSection">
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

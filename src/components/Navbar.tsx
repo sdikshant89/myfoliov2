@@ -22,7 +22,7 @@ function Navbar({
         <div className="flex sm:space-x-0 md:space-x-5">
           <MenuItem setActive={setActive} active={active} item="Explore">
             <div className="flex flex-col space-y-4 text-sm">
-              <button>
+              <button onClick={() => scrollToSection('footerSection')}>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   About
                 </div>
