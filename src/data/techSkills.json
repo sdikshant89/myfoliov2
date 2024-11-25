@@ -20,27 +20,27 @@
             },
             {
                 "iconName":"Typescript",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://www.typescriptlang.org/"
             },
             {
                 "iconName":"Figma",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://www.figma.com/"
             },
             {
                 "iconName":"HTML5",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://developer.mozilla.org/en-US/docs/Web/HTML"
             },
             {
                 "iconName":"Tailwind_CSS",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://tailwindcss.com/"
             },
             {
                 "iconName":"CSS",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://developer.mozilla.org/en-US/docs/Web/CSS"
             },
             {
                 "iconName":"ExtJs",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://www.sencha.com/products/extjs/"
             }    
         ]
     },
@@ -48,40 +48,40 @@
         "skillHead": "Backend",
         "IconsArray": [
             {
-                "iconName":"ExpressJs",
-                "hyperlink":"https://nextjs.org/"
+                "iconName":"Express",
+                "hyperlink":"https://expressjs.com/"
             },
             {
                 "iconName":"NodeJs",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://nodejs.org/en"
             },
             {
                 "iconName":"Spring_Boot",
-                "hyperlink":"https://redux.js.org/"
+                "hyperlink":"https://spring.io/projects/spring-boot"
             },
             {
                 "iconName":"JPA/Hibernate",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://hibernate.org/orm/"
             },
             {
                 "iconName":"C#_.Net",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://learn.microsoft.com/en-us/dotnet/csharp/"
             },
             {
                 "iconName":"Java",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://www.java.com/en/"
             },
             {
                 "iconName":"Junit",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://junit.org/junit5/"
             },
             {
-                "iconName":"SQL",
-                "hyperlink":"https://nextjs.org/"
+                "iconName":"Postgresql",
+                "hyperlink":"https://www.postgresql.org/"
             },
             {
                 "iconName":"MongoDB",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://www.mongodb.com/"
             }    
         ]
     },

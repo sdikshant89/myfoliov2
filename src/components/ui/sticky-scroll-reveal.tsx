@@ -62,7 +62,7 @@ export const StickyScroll = ({
         ease: 'easeInOut',
       }}
       id="WorkExSection"
-      className="min-h-[60rem] md:h-[50rem] w-full rounded-md flex flex-col items-center justify-center top-0 overflow-hidden"
+      className="relative min-h-[60rem] md:h-[50rem] bg-[rgb(24,24,27)] w-full rounded-md flex flex-col items-center justify-center top-0 overflow-hidden"
     >
       <div className="pt-60 pb-4">
         <h3 className="text-center dark:text-gray-400 text-black text-lg md:text-xl font-bold">
@@ -80,7 +80,7 @@ export const StickyScroll = ({
           {content.map((item, index) => (
             <div
               key={item.title + index}
-              className="my-20 h-[30rem] px-4 relative"
+              className="my-10 sm:my-15 h-[30rem] px-6 sm:px-4 relative"
             >
               <motion.h1
                 initial={{
@@ -118,7 +118,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg dark:text-slate-300 text-blue-600 mt-4"
+                className="text-base sm:text-md dark:text-slate-300 text-blue-600 mt-4"
               >
                 {item.description}
               </motion.p>
@@ -136,21 +136,6 @@ export const StickyScroll = ({
             </div>
           ))}
         </div>
-
-        {/* <div
-          className={cn(
-            'justify-start items-start 2xl:block top-2 sticky overflow-hidden',
-            contentClassName
-          )}
-        >
-          <Image
-            src="/Company-Overview-OG.png"
-            alt="Description of the image"
-            width={500}
-            height={200}
-            className="mt-20 rounded-lg"
-          />
-        </div> */}
         <div
           className={cn(
             'hidden xl:block h-[290px] w-[490px] rounded-lg bg-white sticky top-24 overflow-hidden',

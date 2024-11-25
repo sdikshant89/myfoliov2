@@ -37,7 +37,7 @@ function Navbar({
                   Skills
                 </div>
               </button>
-              <button>
+              <button onClick={() => scrollToSection('educationSection')}>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   School
                 </div>
