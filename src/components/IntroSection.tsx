@@ -23,16 +23,7 @@ function IntroSection() {
   ];
   return (
     <AuroraBackground id="introSection">
-      <motion.div
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: 'easeInOut',
-        }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4 overflow-hidden"
-      >
+      <motion.div className="relative flex flex-col gap-4 items-center justify-center px-4 overflow-hidden">
         <div className="min-h-[55rem] md:h-[40rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
           <div className="p-4 relative w-full text-center">
             <h1 className="dark:text-white text-black mt-20 md:mt-0 text-5xl md:text-8xl font-bold">

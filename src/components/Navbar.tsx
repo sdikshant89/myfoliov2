@@ -1,5 +1,6 @@
 'use client';
 import { cn } from '@/utils/cn';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, MenuItem } from './ui/navbar-menu';
 
@@ -22,9 +23,9 @@ function Navbar({
         <div className="flex sm:space-x-0 md:space-x-5">
           <MenuItem setActive={setActive} active={active} item="Explore">
             <div className="flex flex-col space-y-4 text-sm">
-              <button onClick={() => scrollToSection('footerSection')}>
+              <button>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
-                  About
+                  <Link href={'/'}>Home</Link>
                 </div>
               </button>
               <button onClick={() => scrollToSection('WorkExSection')}>
@@ -49,11 +50,9 @@ function Navbar({
               </button>
             </div>
           </MenuItem>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Projects"
-          ></MenuItem>
+          <Link href={'/Projects'}>
+            <MenuItem setActive={setActive} active={active} item="Projects" />
+          </Link>
           <MenuItem setActive={setActive} active={active} item="Socials">
             <div className="flex flex-col space-y-4 text-sm">
               <button
@@ -97,12 +96,9 @@ function Navbar({
               </button>
             </div>
           </MenuItem>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Say Hi!"
-          ></MenuItem>
-
+          <Link href={'/Contact'}>
+            <MenuItem setActive={setActive} active={active} item="Say Hi!" />
+          </Link>
           {/* <a
             href="https://www.python.org/"
             target="_blank"
