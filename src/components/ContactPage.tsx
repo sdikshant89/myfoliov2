@@ -113,20 +113,21 @@ function ContactPage() {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const form = e.target as HTMLFormElement;
-    if (form.checkValidity()) {
-      const formData = new URLSearchParams(Object.entries(formValues));
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(() => alert('Success!'))
-        .catch((error) => alert(error));
-    } else {
-      alert('Form is invalid! Please check the fields');
-    }
-    e.preventDefault();
+    console.log(e);
+    // const form = e.target as HTMLFormElement;
+    // if (form.checkValidity()) {
+    //   const formData = new URLSearchParams(Object.entries(formValues));
+    //   fetch('/', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //     body: new URLSearchParams(formData).toString(),
+    //   })
+    //     .then(() => alert('Success!'))
+    //     .catch((error) => alert(error));
+    // } else {
+    //   alert('Form is invalid! Please check the fields');
+    // }
+    // e.preventDefault();
   };
 
   return (
@@ -141,14 +142,15 @@ function ContactPage() {
     >
       <Boxes />
       <form
+        action="/"
         noValidate
-        name="ContactMe"
+        name="contactMe"
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit}
         className="z-10 p-8 w-2/5 bg-black/50 rounded-2xl"
       >
-        <input type="hidden" name="form-name" value="ContactMe" />
+        <input type="hidden" name="form-name" value="contactMe" />
         <WordRotate
           className="text-7xl font-bold text-black dark:text-white text-center pt-8"
           words={[
