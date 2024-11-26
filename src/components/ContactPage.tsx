@@ -114,20 +114,20 @@ function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     console.log(e);
-    // const form = e.target as HTMLFormElement;
-    // if (form.checkValidity()) {
-    //   const formData = new URLSearchParams(Object.entries(formValues));
-    //   fetch('/', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //     body: new URLSearchParams(formData).toString(),
-    //   })
-    //     .then(() => alert('Success!'))
-    //     .catch((error) => alert(error));
-    // } else {
-    //   alert('Form is invalid! Please check the fields');
-    // }
-    // e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    if (form.checkValidity()) {
+      const formData = new URLSearchParams(Object.entries(formValues));
+      fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => alert('Success!'))
+        .catch((error) => alert(error));
+    } else {
+      alert('Form is invalid! Please check the fields');
+    }
+    e.preventDefault();
   };
 
   return (
