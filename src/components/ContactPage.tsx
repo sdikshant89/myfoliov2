@@ -142,7 +142,6 @@ function ContactPage() {
     >
       <Boxes />
       <form
-        action="/"
         noValidate
         name="contactMe"
         method="POST"
