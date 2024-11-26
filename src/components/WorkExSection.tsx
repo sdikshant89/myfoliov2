@@ -1,7 +1,7 @@
 import contentJson from '../data/workEx.json';
 import { StickyScroll } from './ui/sticky-scroll-reveal';
 
-function WorkExSection({ parentRef }: { parentRef: any }) {
+function WorkExSection() {
   type content = {
     title: string;
     description: string;

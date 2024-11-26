@@ -5,10 +5,8 @@ import Footer from '@/components/Footer';
 import IntroSection from '@/components/IntroSection';
 import SkillsSection from '@/components/SkillsSection';
 import WorkExSection from '@/components/WorkExSection';
-import { useRef } from 'react';
 
 export default function Home() {
-  const ref = useRef<any>(null);
   function scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -18,7 +16,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black antialiased">
       <IntroSection />
-      <WorkExSection parentRef={ref} />
+      <WorkExSection />
       <SkillsSection />
       <EducationSection />
       <Footer scrollToSection={scrollToSection} />

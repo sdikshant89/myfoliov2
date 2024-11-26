@@ -4,8 +4,8 @@ import ProfileIcon from '@/icons/profile.png';
 import ProjectIcon from '@/icons/project_icon.png';
 import SearchIcon from '@/icons/search.png';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image, { StaticImageData } from 'next/image';
+import Link, { LinkProps } from 'next/link';
 import React from 'react';
 
 const transition = {
@@ -17,7 +17,7 @@ const transition = {
   restSpeed: 0.001,
 };
 
-function getIcon(item: string): any {
+function getIcon(item: string): StaticImageData {
   if (item === 'Explore') return SearchIcon;
   else if (item === 'Projects') {
     return ProjectIcon;
@@ -26,6 +26,7 @@ function getIcon(item: string): any {
   } else if (item === 'Say Hi!') {
     return HandWave;
   }
+  return SearchIcon;
 }
 
 export const MenuItem = ({
@@ -133,7 +134,10 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({
+  children,
+  ...rest
+}: LinkProps & { children: React.ReactNode }) => {
   return (
     <Link
       {...rest}

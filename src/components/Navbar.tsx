@@ -9,7 +9,7 @@ function Navbar({
   scrollToSection,
 }: {
   className?: string;
-  scrollToSection: any;
+  scrollToSection: (sectionId: string) => void;
 }) {
   const [active, setActive] = useState<string | null>(null);
   return (

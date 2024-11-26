@@ -2,7 +2,6 @@ import LinkedinIcon from '@/icons/LI-In-Bug.png';
 import GitIcon from '@/icons/github-color.svg';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
 
 function Footer({
   scrollToSection,
@@ -11,17 +10,16 @@ function Footer({
 }) {
   //TODO add alertbox after copying phone number
   //TODO small screen styling
-  const [open, setOpen] = React.useState(false);
+  //const [open, setOpen] = React.useState(false);
   const phoneNumber = '+17807168714';
   const handleClick = () => {
-    navigator.clipboard
-      .writeText(phoneNumber)
-      .then(() => {
-        setOpen(true);
-      })
-      .catch((err) => {
-        console.error('Failed to copy: ', err);
-      });
+    navigator.clipboard.writeText(phoneNumber);
+    // .then(() => {
+    //   setOpen(true);
+    // })
+    // .catch((err) => {
+    //   console.error('Failed to copy: ', err);
+    // });
   };
 
   function NavButton({ name, sectionId }: { name: string; sectionId: string }) {
