@@ -82,7 +82,7 @@ function EducationSection() {
               hpLink="https://www.ualberta.ca/en/index.html"
             />
             <h3 className="text-xl md:text-2xl text-white font-medium">
-              Master&apos;s of Science in Computer Science - Multimedia
+              Master of Science in Computer Science (Multimedia)
             </h3>
             <h3 className="text-xl md:text-2xl text-gray-500 font-medium">
               Sept. 2023 - Jan. 2025
@@ -98,7 +98,7 @@ function EducationSection() {
               hpLink="https://kiit.ac.in/"
             />
             <h3 className="text-xl md:text-2xl text-white font-medium">
-              Bachelor&apos;s in Technology (Computer Engineering - I.T.)
+              Bachelor of Technology (Computer Engineering - I.T.)
             </h3>
             <h3 className="text-xl md:text-2xl text-gray-500 font-medium">
               July 2018 - May 2022

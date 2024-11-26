@@ -90,35 +90,35 @@
         "IconsArray": [
             {
                 "iconName":"Python",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://www.python.org/"
             },
             {
                 "iconName":"Unity",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://unity.com/"
             },
             {
                 "iconName":"Git",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://git-scm.com/"
             },
             {
                 "iconName":"Agile",
-                "hyperlink":"https://react.dev/"
+                "hyperlink":"https://www.atlassian.com/agile"
             },
             {
                 "iconName":"Scrum",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://en.wikipedia.org/wiki/Scrum_(software_development)"
             },
             {
                 "iconName":"Visual_Studio",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://code.visualstudio.com/"
             },
             {
                 "iconName":"Jira",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://www.atlassian.com/software/jira"
             },
             {
                 "iconName":"MATLAB",
-                "hyperlink":"https://nextjs.org/"
+                "hyperlink":"https://www.mathworks.com/products/matlab.html"
             }
         ]
     }

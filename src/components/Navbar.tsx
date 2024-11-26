@@ -22,14 +22,14 @@ function Navbar({
       <Menu setActive={setActive}>
         <div className="flex sm:space-x-0 md:space-x-5">
           <MenuItem setActive={setActive} active={active} item="Explore">
-            <div className="flex flex-col space-y-4 text-sm">
+            <div className="flex flex-col space-y-4 text-sm text-white">
               <button>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   <Link href={'/'}>Home</Link>
                 </div>
               </button>
               <button onClick={() => scrollToSection('WorkExSection')}>
-                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
+                <div className="flex justify-center items-center w-full text-lg  hover:font-bold">
                   Work Ex
                 </div>
               </button>
@@ -41,11 +41,6 @@ function Navbar({
               <button onClick={() => scrollToSection('educationSection')}>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
                   School
-                </div>
-              </button>
-              <button>
-                <div className="flex justify-center items-center w-full text-lg hover:font-bold">
-                  Certificates
                 </div>
               </button>
             </div>
@@ -84,7 +79,7 @@ function Navbar({
               <button
                 onClick={() =>
                   window.open(
-                    'https://github.com/sdikshant89',
+                    'https://sharmadshanv1.netlify.app/',
                     '_blank',
                     'noopener,noreferrer'
                   )
@@ -99,23 +94,6 @@ function Navbar({
           <Link href={'/Contact'}>
             <MenuItem setActive={setActive} active={active} item="Say Hi!" />
           </Link>
-          {/* <a
-            href="https://www.python.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex justify-center items-center"
-          >
-            <Image src={LinkIcon} alt="Python" className="w-7 h-6" />
-          </a>
-
-          <a
-            href="https://www.python.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex justify-center items-center"
-          >
-            <Image src={GitIcon} alt="Python" className="w-6 h-6" />
-          </a> */}
         </div>
       </Menu>
       {/* <div className="absolute flex flex-row -right-full justify-end top-1/2 transform -translate-y-1/2 w-[200px]">
