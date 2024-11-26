@@ -63,7 +63,7 @@ function EducationSection() {
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
           Schooling
         </h3>
-        <h1 className="pt-2 text-center text-4xl md:text-6xl font-bold">
+        <h1 className="pt-2 text-center text-white text-4xl md:text-6xl font-bold">
           Chapters of My Education
         </h1>
       </div>

@@ -9,12 +9,8 @@ import Link, { LinkProps } from 'next/link';
 import React from 'react';
 
 const transition = {
-  type: 'spring',
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
+  duration: 0.6,
+  ease: 'easeInOut',
 };
 
 function getIcon(item: string): StaticImageData {
@@ -33,11 +29,13 @@ export const MenuItem = ({
   setActive,
   active,
   item,
+  link,
   children,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
+  link?: string;
   children?: React.ReactNode;
 }) => {
   const [isWideScreen, setIsWideScreen] = React.useState<boolean>(false);
@@ -55,7 +53,13 @@ export const MenuItem = ({
         transition={{ duration: 0.3 }}
         className="sm:w-28 w-20 cursor-pointer text-black hover:opacity-[0.9] hover:font-bold dark:text-white font-medium text-lg flex justify-evenly items-center hover:scale-[1.05] transition-all duration-300"
       >
-        <div>{item}</div>
+        {link ? (
+          <Link href={link}>
+            <div>{item}</div>
+          </Link>
+        ) : (
+          <div>{item}</div>
+        )}
         {isWideScreen && (
           <Image src={getIcon(item)} className="w-5 h-5" alt="icon" />
         )}

@@ -63,7 +63,7 @@ function SkillsSection() {
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
           Skillset
         </h3>
-        <h1 className="pt-2 text-center text-4xl md:text-6xl font-bold">
+        <h1 className="pt-2 text-center text-white text-4xl md:text-6xl font-bold">
           My Technical Skills
         </h1>
         <p className="mt-4 max-w-3xl text-center text-base sm:text-lg mx-6 sm:mx-auto font-medium text-gray-500">

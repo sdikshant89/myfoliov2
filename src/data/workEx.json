@@ -5,7 +5,7 @@
     "orgLink": "https://chokkacenter.com/",
     "src": "/chokka.png",
     "description": "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform,Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform,Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform,",
-    "skills":[ "NodeJs", "Express", "VueJs", "CouchDB", "Microservices", "SQL", "abcd", "Microservices", "SQL", "abcd"]
+    "skills":[ "NodeJs", "ExpressJs", "VueJs", "BootstrapVue","CouchDB", "Microservices", "SQL", "NGINX", "Python", "Machine Learning"]
   },
   {
     "title": "Associate Software Engineer - I",
@@ -13,14 +13,14 @@
     "orgLink": "https://www.highradius.com/",
     "src": "/hrc2.png",
     "description": "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    "skills":[ "Java", "Spring Boot", "React", "Javascript", "Redux", "Junit", "Git", "Jira", "ExtJS", "SQL","Python"]
+    "skills":[ "Java", "Spring Boot", "Typescript", "React", "Redux", "Junit", "Git", "Jira", "ExtJS", "SQL","Python", "Docker", "CI/CD Pipeline"]
   },
   {
     "title": "Software Developer Intern",
     "org": "Highradius Technologies",
-    "orgLink": "https://chokkacenter.com/",
+    "orgLink": "https://www.highradius.com/",
     "src": "/Company-Overview-OG.png",
     "description": "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    "skills":[ "python", "Java", "JDBC", "Eclipse", "Javascript", "React", "Redux", "ML", "AI", "Numpy", "Pandas"]
+    "skills":[ "python", "Java", "JDBC", "Eclipse", "Javascript", "React", "Redux", "ML", "AI", "Numpy", "Pandas", "Matplotlib"]
   }
 ]

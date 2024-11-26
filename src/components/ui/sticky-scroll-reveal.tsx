@@ -65,10 +65,10 @@ export const StickyScroll = ({
       className="relative min-h-[60rem] md:h-[50rem] bg-[rgb(24,24,27)] w-full rounded-md flex flex-col items-center justify-center top-0 overflow-hidden"
     >
       <div className="pt-60 pb-4">
-        <h3 className="text-center dark:text-gray-400 text-black text-lg md:text-xl font-bold">
+        <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
           Work Experience
         </h3>
-        <h1 className="pt-2 text-center text-4xl md:text-6xl font-bold">
+        <h1 className="pt-2 text-center text-white text-4xl md:text-6xl font-bold">
           Companies I worked for in the past
         </h1>
       </div>

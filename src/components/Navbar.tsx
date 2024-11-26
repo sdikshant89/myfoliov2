@@ -21,11 +21,16 @@ function Navbar({
     >
       <Menu setActive={setActive}>
         <div className="flex sm:space-x-0 md:space-x-5">
-          <MenuItem setActive={setActive} active={active} item="Explore">
+          <MenuItem
+            setActive={setActive}
+            link="/"
+            active={active}
+            item="Explore"
+          >
             <div className="flex flex-col space-y-4 text-sm text-white">
-              <button>
+              <button onClick={() => scrollToSection('footerSection')}>
                 <div className="flex justify-center items-center w-full text-lg hover:font-bold">
-                  <Link href={'/'}>Home</Link>
+                  About
                 </div>
               </button>
               <button onClick={() => scrollToSection('WorkExSection')}>
@@ -45,6 +50,7 @@ function Navbar({
               </button>
             </div>
           </MenuItem>
+
           <Link href={'/Projects'}>
             <MenuItem setActive={setActive} active={active} item="Projects" />
           </Link>
