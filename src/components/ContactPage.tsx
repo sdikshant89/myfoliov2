@@ -117,7 +117,7 @@ function ContactPage() {
     if (form.checkValidity()) {
       const formData = new URLSearchParams(Object.entries(formValues));
       formData.append('form-name', 'ContactMe');
-      fetch('/', {
+      fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
