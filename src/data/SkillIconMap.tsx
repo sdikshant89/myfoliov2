@@ -17,6 +17,7 @@ import ExtIcon from '../icons/skills/extjs.png';
 import FigmaIcon from '../icons/skills/figma.png';
 import GitIcon from '../icons/skills/git.png';
 import HTMLIcon from '../icons/skills/html.png';
+import JiraIcon from '../icons/skills/jira.png';
 import JSIcon from '../icons/skills/js.png';
 import MatlabIcon from '../icons/skills/matlab.png';
 import NextIcon from '../icons/skills/nextjs.png';
@@ -59,4 +60,5 @@ export const skillIconMap: Record<string, StaticImageData> = {
   Scrum: AgileIcon,
   VisualStudio: VSCodeIcon,
   MATLAB: MatlabIcon,
+  Jira: JiraIcon,
 };

@@ -122,7 +122,10 @@ function ContactPage() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       })
-        .then(() => alert('Success!'))
+        .then(() => {
+          alert('Success!');
+          handleClear();
+        })
         .catch((error) => alert(error));
     } else {
       alert('Form is invalid! Please check the fields');

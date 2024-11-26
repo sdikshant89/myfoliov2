@@ -49,7 +49,7 @@ function Navbar({
             <MenuItem setActive={setActive} active={active} item="Projects" />
           </Link>
           <MenuItem setActive={setActive} active={active} item="Socials">
-            <div className="flex flex-col space-y-4 text-sm">
+            <div className="flex flex-col space-y-4 text-sm text-white">
               <button
                 onClick={() =>
                   window.open(
