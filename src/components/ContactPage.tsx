@@ -64,7 +64,7 @@ function CustomInput({
   React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
   return (
     <div className="flex flex-col gap-y-2 pt-6 w-full">
-      <h2 className="text-white font-bold text-xl">{label}</h2>
+      <h2 className="text-white font-bold text-md md:text-xl">{label}</h2>
       <Input
         placeholder={placeholder}
         type={type}
@@ -150,11 +150,11 @@ function ContactPage() {
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit}
-        className="z-10 p-8 w-2/5 bg-black/50 rounded-2xl"
+        className="z-10 p-4 md:p-8 w-4/5 md:w-2/5 bg-black/50 rounded-2xl"
       >
         <input type="hidden" name="form-name" value="ContactMe" />
         <WordRotate
-          className="text-7xl font-bold text-black dark:text-white text-center pt-8"
+          className="text-3xl md:text-7xl font-bold text-black dark:text-white text-center pt-4 md:pt-8"
           words={[
             'Contact.',
             'Say Hi!',
@@ -165,7 +165,7 @@ function ContactPage() {
             'Message Away!',
           ]}
         />
-        <div className="flex items-center justify-center gap-x-5">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-x-5">
           <CustomInput
             label="Name"
             placeholder="Javas Cript"

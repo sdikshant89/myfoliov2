@@ -26,17 +26,17 @@ function IntroSection() {
       <motion.div className="relative flex flex-col gap-4 items-center justify-center px-4 overflow-hidden">
         <div className="min-h-[55rem] md:h-[40rem] w-full rounded-md flex flex-col item-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
           <div className="p-4 relative w-full text-center">
-            <h1 className="dark:text-white text-black mt-20 md:mt-0 text-5xl md:text-8xl font-bold">
+            <h1 className="dark:text-white text-black mt-20 md:mt-0 text-6xl md:text-8xl font-bold">
               I&apos;m <FlipWords words={names} />
             </h1>
-            <p className="mt-6 sm:text-lg text-md dark:text-white text-blue-600 max-w-xl mx-auto">
+            <p className="my-12 sm:my-8 sm:text-lg text-md dark:text-white text-blue-600 max-w-xl mx-auto">
               A <b>Full Stack Developer</b> with hands-on experience in crafting
               end to end scalable web applications. Proficient in both frontend
               and backend technologies, committed to continuous learning and
               creating impactful software solutions that meet diverse user
               needs.
             </p>
-            <div className="mt-8 flex justify-between max-w-3xl mx-auto items-center">
+            <div className="mt-8 flex justify-between sm:justify-center max-w-3xl mx-auto items-center flex-wrap sm:gap-x-14 gap-y-6">
               <a
                 href="https://www.python.org/"
                 target="_blank"

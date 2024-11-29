@@ -2,9 +2,13 @@ import { skillIconMap } from '@/data/SkillIconMap';
 import mySkills from '@/data/techSkills.json';
 import ExIcon from '@/icons/exclamation.png';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
-import { IconCloud } from './ui/icon-cloud';
+const IconCloud = dynamic(
+  () => import('./ui/icon-cloud').then((mod) => mod.IconCloud),
+  { ssr: false }
+);
 
 const slugs = [
   'typescript',

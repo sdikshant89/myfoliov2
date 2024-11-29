@@ -45,7 +45,7 @@ function Footer({
         }}
         id="footerSection"
       >
-        <div className="relative h-70 md:h-90 w-full rounded-md flex item-center justify-between px-10 pt-24 bg-[rgb(24,24,35)]">
+        <div className="relative h-70 md:h-90 w-full rounded-md flex flex-col md:flex-row item-center justify-between px-10 pt-16 md:pt-24 bg-[rgb(24,24,35)]">
           <div className="flex flex-col w-1/2">
             <h1 className="font-bold text-white text-7xl">Dikshant S.</h1>
             <h1 className="font-semibold text-gray-500 text-lg px-1">
@@ -76,14 +76,14 @@ function Footer({
               </a>
             </div>
           </div>
-          <div className="pr-20 flex items-start justify-end w-1/2 gap-x-36 text-white text-md font-medium">
-            <div className="flex flex-col gap-y-16 text-left">
+          <div className="my-16 md:my-0 md:pr-20 flex items-start justify-center md:justify-end md:w-1/2 gap-x-36 text-white text-md font-medium">
+            <div className="flex flex-col gap-y-6 md:gap-y-16 text-left">
               <NavButton name="Home" sectionId="introSection" />
               <NavButton name="WorkEx." sectionId="WorkExSection" />
               <NavButton name="Projects" sectionId="introSection" />
               <NavButton name="Skills" sectionId="skillSection" />
             </div>
-            <div className="flex flex-col gap-y-16 items-start justify-start">
+            <div className="flex flex-col gap-y-6 md:gap-y-16 items-start justify-start">
               <a href="mailto:sharma.dshan@gmail.com">
                 <button className="p-1 text-left hover:scale-110 transition-all duration-300">
                   Email

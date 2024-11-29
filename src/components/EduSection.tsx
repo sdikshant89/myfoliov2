@@ -4,8 +4,13 @@ import UofAIcon from '@/icons/UofA.png';
 import KIITIcon from '@/icons/kiitLogo.png';
 import { cn } from '@/utils/cn';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { BackgroundBeams } from './ui/background-beams';
+import { useMediaQuery } from 'react-responsive';
+const BackgroundBeams = dynamic(
+  () => import('./ui/background-beams').then((mod) => mod.BackgroundBeams),
+  { ssr: false }
+);
 
 interface BlurIntProps {
   word: string;
@@ -47,6 +52,8 @@ const BlurIn = ({
 };
 
 function EducationSection() {
+  const isMediumOrLarger = useMediaQuery({ query: '(min-width: 768px)' });
+
   return (
     <motion.div
       initial={{ opacity: 0.0, y: 40 }}
@@ -57,7 +64,7 @@ function EducationSection() {
         ease: 'easeInOut',
       }}
       id="educationSection"
-      className="relative h-70 md:h-90 w-full rounded-md flex flex-col item-center justify-center px-20 py-40 bg-black"
+      className="relative h-70 md:h-90 w-full rounded-md flex flex-col item-center justify-center px-6 py-12 md:px-20 md:py-40 bg-black"
     >
       <div className="py-12">
         <h3 className="text-center text-gray-400 text-lg md:text-xl font-bold">
@@ -111,7 +118,7 @@ function EducationSection() {
           />
         </div>
       </div>
-      <BackgroundBeams />
+      {isMediumOrLarger && <BackgroundBeams />}
     </motion.div>
   );
 }
