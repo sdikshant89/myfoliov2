@@ -4,7 +4,7 @@ import EducationSection from '@/components/EduSection';
 import Footer from '@/components/Footer';
 import IntroSection from '@/components/IntroSection';
 import SkillsSection from '@/components/SkillsSection';
-import WorkExSection from '@/components/WorkExSection';
+import { WorkExSectionV2 } from '@/components/SkillsSectionV2';
 
 export default function Home() {
   function scrollToSection(sectionId: string) {
@@ -16,7 +16,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black antialiased">
       <IntroSection />
-      <WorkExSection />
+      {/* <WorkExSection /> */}
+      <WorkExSectionV2 />
       <SkillsSection />
       <EducationSection />
       <Footer scrollToSection={scrollToSection} />
