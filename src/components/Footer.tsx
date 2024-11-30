@@ -1,25 +1,20 @@
 import LinkedinIcon from '@/icons/LI-In-Bug.png';
 import GitIcon from '@/icons/github-color.svg';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
 
 function Footer({
   scrollToSection,
 }: {
   scrollToSection: (sectionId: string) => void;
 }) {
-  //TODO add alertbox after copying phone number
-  //TODO small screen styling
-  //const [open, setOpen] = React.useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   const phoneNumber = '+17807168714';
   const handleClick = () => {
     navigator.clipboard.writeText(phoneNumber);
-    // .then(() => {
-    //   setOpen(true);
-    // })
-    // .catch((err) => {
-    //   console.error('Failed to copy: ', err);
-    // });
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 5000);
   };
 
   function NavButton({ name, sectionId }: { name: string; sectionId: string }) {
@@ -105,6 +100,28 @@ function Footer({
           </div>
         </div>
       </motion.div>
+      <AnimatePresence>
+        {showAlert && (
+          <motion.div
+            initial={{ opacity: 0.0, x: 20 }}
+            animate={showAlert ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            exit={{ opacity: 0.0, x: -20 }}
+            transition={{
+              duration: 0.8,
+              ease: 'easeInOut',
+            }}
+            className="fixed p-3 m-4 md:m-6 bg-indigo-800 items-center text-indigo-100 leading-none rounded-full inline-flex z-20 bottom-14 left-auto whitespace-nowrap"
+            role="alert"
+          >
+            <span className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">
+              Info
+            </span>
+            <span className="font-semibold mr-2 text-left">
+              Phone number copied to clipboard
+            </span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
