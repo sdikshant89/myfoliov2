@@ -61,7 +61,6 @@ export const StickyScroll = ({
         duration: 0.8,
         ease: 'easeInOut',
       }}
-      id="WorkExSection"
       className="relative min-h-[60rem] md:h-[50rem] bg-[rgb(24,24,27)] w-full rounded-md flex flex-col items-center justify-center top-0 overflow-hidden"
     >
       <div className="pt-60 pb-4">

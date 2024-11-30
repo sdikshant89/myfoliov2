@@ -64,7 +64,7 @@ export function WorkExSectionV2() {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full" id="WorkExSection">
       <Timeline data={data} />
     </div>
   );
