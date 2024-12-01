@@ -4,7 +4,7 @@
     "org": "The Chokka Center",
     "orgLink": "https://chokkacenter.com/",
     "src": "/chokka.png",
-    "description": "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform,Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform,Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform,",
+    "description": "At the clinic, I developed a microservice from the ground up using Node.js and Express.js to analyze, predict, and measure patient mental health severity based on their questionnaire responses, integrating it seamlessly into the existing software ecosystem. I collaborated on critical projects, addressing high-priority bugs and adding new features that significantly improved the reliability and user experience for both patients and doctors. By optimizing data storage in a NoSQL database, I reduced storage and processing overhead by 40–45%, enhancing the system's efficiency. Additionally, I created detailed developer documentation, including API references, architectural diagrams, and onboarding guides, to facilitate seamless maintenance and knowledge sharing within the team.",
     "skills":[ "NodeJs", "ExpressJs", "VueJs", "BootstrapVue","CouchDB", "Microservices", "SQL", "NGINX", "Python", "Machine Learning"]
   },
   {
@@ -12,7 +12,7 @@
     "org": "Highradius Technologies",
     "orgLink": "https://www.highradius.com/",
     "src": "/hrc2.png",
-    "description": "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    "description": "During my tenure, I architected and implemented over 50 user stories and resolved 150+ bugs for payment-based web applications, leveraging a full-stack ecosystem of React, ExtJS, Java Spring Boot, and JPA. I took on the role of Scrum Master for six months, leading Scrum meetings and ensuring adherence to Agile practices to boost team productivity. By optimizing REST API interactions with SQL server databases, I addressed resource overhead issues, achieving a 60% improvement in system performance while reducing API response times and cloud processor usage. I spearheaded the migration of B2B SaaS virtual card payment systems from legacy technologies like Spring MVC, Hibernate, and ExtJS to a modern stack with React and Spring Boot, integrating Java web services to enhance inter-application communication. Additionally, I introduced JUnit testing for backend projects and conducted training sessions to equip developers with best practices in testing and quality assurance.",
     "skills":[ "Java", "Spring Boot", "Typescript", "React", "Redux", "Junit", "Git", "Jira", "ExtJS", "SQL","Python", "Docker", "CI/CD Pipeline"]
   },
   {
@@ -20,7 +20,7 @@
     "org": "Highradius Technologies",
     "orgLink": "https://www.highradius.com/",
     "src": "/Company-Overview-OG.png",
-    "description": "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    "description": "I developed a full-stack web application using React, SQL, and JDBC to streamline invoice management for B2B sellers. The application included robust features such as tracking invoice statuses (paid, rejected, delayed), initiating disputes, and maintaining detailed payment histories, providing users with an efficient tool for managing financial workflows. Additionally, I collaborated with client data to design a machine learning model that predicts customer churn and estimates accounts receivable based on historical credit purchase data, enabling businesses to make informed decisions and improve financial planning.",
     "skills":[ "python", "Java", "JDBC", "Eclipse", "Javascript", "React", "Redux", "ML", "AI", "Numpy", "Pandas", "Matplotlib"]
   }
 ]

@@ -25,6 +25,15 @@ function getIcon(item: string): StaticImageData {
   return SearchIcon;
 }
 
+const BottomGradient = () => {
+  return (
+    <>
+      <span className="block absolute h-1 w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
+      <span className="blur-sm block absolute h-1 w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+    </>
+  );
+};
+
 export const MenuItem = ({
   setActive,
   active,
@@ -97,12 +106,15 @@ export const Menu = ({
   children: React.ReactNode;
 }) => {
   return (
-    <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full backdrop-blur-nav shadow-input flex justify-center space-x-6 sm:space-x-4 px-2 sm:px-6 py-4"
-    >
-      {children}
-    </nav>
+    <>
+      <nav
+        onMouseLeave={() => setActive(null)} // resets the state
+        className="relative rounded-full backdrop-blur-nav shadow-input flex justify-center items-center space-x-6 sm:space-x-4 px-2 sm:px-6 py-4 h-[80px] md:h-auto"
+      >
+        {children}
+      </nav>
+      <BottomGradient />
+    </>
   );
 };
 

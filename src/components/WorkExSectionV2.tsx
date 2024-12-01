@@ -19,8 +19,7 @@ function createJobDesc(itemIndex: number) {
       initial={{ opacity: 0.0, x: 10 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{
-        delay: 0.3,
-        duration: 1.5,
+        duration: 3,
         type: 'spring',
         bounce: 0.5,
       }}

@@ -2,15 +2,15 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import CppIcon from '../icons/skills/c-sharp.png';
-import CSSIcon from '../icons/skills/css.png';
 import GitIcon from '../icons/skills/git.png';
 import HTMLIcon from '../icons/skills/html.png';
 import JavaIcon from '../icons/skills/java.png';
 import JiraIcon from '../icons/skills/jira.png';
-import JsIcon from '../icons/skills/js.png';
+import MongoIcon from '../icons/skills/mongodb.png';
 import PyIcon from '../icons/skills/py.png';
 import ReactIcon from '../icons/skills/react.png';
-import SqlIcon from '../icons/skills/sql.png';
+import TailIcon from '../icons/skills/Tailwind.png';
+import TsIcon from '../icons/skills/typescript.png';
 import { AuroraBackground } from './ui/aurora-background';
 import { FlipWords } from './ui/flip-words';
 
@@ -49,23 +49,23 @@ function IntroSection() {
                 />
               </a>
               <a
-                href="https://www.mysql.com/"
+                href="https://www.mongodb.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={SqlIcon}
+                  src={MongoIcon}
                   alt="Python"
                   className="w-6 h-6 hover:w-9 hover:h-9 transition-all duration-300"
                 />
               </a>
               <a
-                href="https://nodejs.org/en"
+                href="https://www.typescriptlang.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={JsIcon}
+                  src={TsIcon}
                   alt="Python"
                   className="w-6 h-6 hover:w-9 hover:h-9 transition-all duration-300"
                 />
@@ -77,17 +77,6 @@ function IntroSection() {
               >
                 <Image
                   src={HTMLIcon}
-                  alt="Python"
-                  className="w-6 h-6 hover:w-9 hover:h-9 transition-all duration-300"
-                />
-              </a>
-              <a
-                href="https://www.atlassian.com/software/jira"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={JiraIcon}
                   alt="Python"
                   className="w-6 h-6 hover:w-9 hover:h-9 transition-all duration-300"
                 />
@@ -137,12 +126,23 @@ function IntroSection() {
                 />
               </a>
               <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={CSSIcon}
+                  src={TailIcon}
+                  alt="Tailwind"
+                  className="w-6 h-6 hover:w-9 hover:h-9 transition-all duration-300"
+                />
+              </a>
+              <a
+                href="https://www.atlassian.com/software/jira"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={JiraIcon}
                   alt="Python"
                   className="w-6 h-6 hover:w-9 hover:h-9 transition-all duration-300"
                 />

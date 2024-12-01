@@ -11,11 +11,12 @@ function Navbar({
   className?: string;
   scrollToSection: (sectionId: string) => void;
 }) {
+  //TODO check url if not homepage then first return to homepage and then scroll to section
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
       className={cn(
-        'fixed top-16 inset-x-0 sm:w-md md:max-w-xl mx-auto z-50',
+        'fixed top-4 md:top-16 inset-x-0 sm:w-md md:max-w-xl mx-auto z-50',
         className
       )}
     >
@@ -102,34 +103,6 @@ function Navbar({
           </Link>
         </div>
       </Menu>
-      {/* <div className="absolute flex flex-row -right-full justify-end top-1/2 transform -translate-y-1/2 w-[200px]">
-        <span className="flex items-center justify-center w-[75px] h-[75px] rounded-full bg-black mx-5">
-          <a
-            href="https://www.python.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={GitIcon}
-              alt="Python"
-              className="w-[20px] h-[20px] hover:w-9 hover:h-9 transition-all duration-300"
-            />
-          </a>
-        </span>
-        <span className="flex items-center justify-center w-[75px] h-[75px] rounded-full bg-black">
-          <a
-            href="https://www.python.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={GitIcon}
-              alt="Python"
-              className="w-[20px] h-[20px] hover:w-9 hover:h-9 transition-all duration-300"
-            />
-          </a>
-        </span>
-      </div> */}
     </div>
   );
 }
