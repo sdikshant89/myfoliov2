@@ -83,7 +83,7 @@ export const MenuItem = ({
             <div className="absolute top-[calc(100%_+_0.5rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
+                layoutId="active"
                 className="backdrop-blur-dropdown rounded-2xl overflow-hidden shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
@@ -112,8 +112,8 @@ export const Menu = ({
         className="relative rounded-full backdrop-blur-nav shadow-input flex justify-center items-center space-x-6 sm:space-x-4 px-2 sm:px-6 py-4 h-[80px] md:h-auto"
       >
         {children}
+        <BottomGradient />
       </nav>
-      <BottomGradient />
     </>
   );
 };
