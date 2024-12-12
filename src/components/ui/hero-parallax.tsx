@@ -151,6 +151,8 @@ export const ProductCard = ({
             (currentIndex + 1) % product.thumbnail.length
           ];
         });
+      }, 500);
+      setTimeout(() => {
         setIsTransitioning(false);
       }, 500);
     }, interval);
