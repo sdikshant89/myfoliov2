@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black antialiased">
       <IntroSection />
-      {/* <WorkExSection /> */}
       <WorkExSectionV2 />
       <SkillsSection />
       <EducationSection />
