@@ -151,10 +151,10 @@ export const ProductCard = ({
             (currentIndex + 1) % product.thumbnail.length
           ];
         });
-      }, 500);
+      }, 250);
       setTimeout(() => {
         setIsTransitioning(false);
-      }, 500);
+      }, 700);
     }, interval);
 
     return () => clearInterval(intervalId);
@@ -181,7 +181,7 @@ export const ProductCard = ({
           src={currentImage}
           fill={true}
           style={{ objectPosition: '50% 50%' }}
-          className={`object-cover object-left-top absolute h-full w-full inset-0 transition-opacity duration-500 ${
+          className={`object-cover object-left-top absolute h-full w-full inset-0 transition-opacity duration-300 ${
             isTransitioning ? 'opacity-0' : 'opacity-100'
           }`}
           alt={product.title}
