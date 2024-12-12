@@ -20,7 +20,7 @@ export const HeroParallax = ({
 }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  // const thirdRow = products.slice(10, 15);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -138,7 +138,8 @@ export const ProductCard = ({
     product.thumbnail[0]
   );
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
-  const [interval, setIntervalState] = useState<number>(getRandomInterval());
+  //const [interval, setIntervalState] = useState<number>(getRandomInterval());
+  const interval = getRandomInterval();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
