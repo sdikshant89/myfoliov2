@@ -4,13 +4,13 @@ import UofAIcon from '@/icons/UofA.png';
 import KIITIcon from '@/icons/kiitLogo.png';
 import { cn } from '@/utils/cn';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
-const BackgroundBeams = dynamic(
-  () => import('./ui/background-beams').then((mod) => mod.BackgroundBeams),
-  { ssr: false }
-);
+// const BackgroundBeams = dynamic(
+//   () => import('./ui/background-beams').then((mod) => mod.BackgroundBeams),
+//   { ssr: false }
+// );
 
 interface BlurIntProps {
   word: string;
@@ -118,7 +118,7 @@ function EducationSection() {
           />
         </div>
       </div>
-      {isMediumOrLarger && <BackgroundBeams />}
+      {/* {isMediumOrLarger && <BackgroundBeams />} */}
     </motion.div>
   );
 }

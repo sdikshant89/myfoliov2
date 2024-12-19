@@ -1,5 +1,5 @@
 'use client';
-import { Boxes } from '@/components/ui/background-boxes';
+// import { Boxes } from '@/components/ui/background-boxes';
 import { Input } from '@/components/ui/form-components';
 import { cn } from '@/utils/cn';
 import { AnimatePresence, HTMLMotionProps, motion } from 'framer-motion';
@@ -143,7 +143,7 @@ function ContactPage() {
       }}
       className="relative flex flex-col items-center justify-center overflow-hidden min-h-screen w-full bg-gradient-to-br from-gray-700 to-black antialiased "
     >
-      <Boxes />
+      {/* <Boxes /> */}
       <form
         noValidate
         name="ContactMe"
