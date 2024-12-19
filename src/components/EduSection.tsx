@@ -6,7 +6,6 @@ import { cn } from '@/utils/cn';
 import { motion } from 'framer-motion';
 // import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
 // const BackgroundBeams = dynamic(
 //   () => import('./ui/background-beams').then((mod) => mod.BackgroundBeams),
 //   { ssr: false }
@@ -52,7 +51,7 @@ const BlurIn = ({
 };
 
 function EducationSection() {
-  const isMediumOrLarger = useMediaQuery({ query: '(min-width: 768px)' });
+  //const isMediumOrLarger = useMediaQuery({ query: '(min-width: 768px)' });
 
   return (
     <motion.div

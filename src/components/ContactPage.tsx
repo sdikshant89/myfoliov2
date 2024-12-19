@@ -160,7 +160,6 @@ function ContactPage() {
             'Say Hi!',
             'Lets Connect!',
             'Get in touch :)',
-            'Have a Question?',
             'Start a Conv.',
             'Message Away!',
           ]}
@@ -168,7 +167,7 @@ function ContactPage() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-x-5">
           <CustomInput
             label="Name"
-            placeholder="Javas Cript"
+            placeholder="Who's this?"
             value={formValues.name}
             type="text"
             required
@@ -178,7 +177,7 @@ function ContactPage() {
           />
           <CustomInput
             label="Email"
-            placeholder="sharma.dshan@gmail.com"
+            placeholder="Email String?"
             value={formValues.email}
             type="email"
             required
@@ -188,7 +187,7 @@ function ContactPage() {
         </div>
         <CustomInput
           label="Message"
-          placeholder="Hi Dikshant! Nice Connecting with you."
+          placeholder="What's Bugging?"
           value={formValues.message}
           type="text"
           rows={4}
