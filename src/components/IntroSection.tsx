@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { AuroraBackground } from './ui/aurora-background';
 import { FlipWords } from './ui/flip-words';
+import InteractiveHoverButton from './ui/InteractiveButton';
 
 function IntroSection() {
   const names = [
@@ -24,6 +25,13 @@ function IntroSection() {
               experiences, blending creativity with technical expertise to
               deliver impactful solutions.
             </p>
+          </div>
+          <div className="w-full flex justify-center items-center">
+            <InteractiveHoverButton
+              text="Contact"
+              hoverText="Hello!"
+              link="/Contact"
+            />
           </div>
         </div>
       </motion.div>

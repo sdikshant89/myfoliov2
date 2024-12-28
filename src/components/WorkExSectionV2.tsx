@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 type content = {
   title: string;
-  description: string;
+  description: string[];
   org: string;
   orgLink: string;
   src: string;
@@ -51,16 +51,22 @@ function createJobDesc(itemIndex: number) {
           {item.org}
         </a>
       </h3>
-      <p className="text-md dark:text-slate-300 text-blue-600 mt-4">
-        {item.description}
-      </p>
+      {/* <p className="text-md text-slate-300 mt-4">{item.description}</p> */}
+      <ul className="list-disc pl-4 text-justify my-5">
+        {item.description.map((point, index) => (
+          <li key={`icon-${index}-`} className="my-2">
+            {point}
+          </li>
+        ))}
+      </ul>
       <div className="pt-4 w-full flex flex-wrap justify-start items-center">
         {item.skills.map((skillItem, skillIndex) => (
           <a
             target="_blank"
             rel="noopener noreferrer"
             href={skillItem.hyperlink}
-            className="mx-6 my-3"
+            key={`icon-${skillIndex}-${skillItem.iconName}`}
+            className="mx-5 my-3"
           >
             <Image
               src={getSkillIcon(skillItem.iconName.replace(/[_\.]/g, ''))}

@@ -4,7 +4,12 @@
     "org": "The Chokka Center",
     "orgLink": "https://chokkacenter.com/",
     "src": "/chokka.png",
-    "description": "At the clinic, I developed a microservice from the ground up using Node.js and Express.js to analyze, predict, and measure patient mental health severity based on their questionnaire responses, integrating it seamlessly into the existing software ecosystem. I collaborated on critical projects, addressing high-priority bugs and adding new features that significantly improved the reliability and user experience for both patients and doctors. By optimizing data storage in a NoSQL database, I reduced storage and processing overhead by 40–45%, enhancing the system's efficiency. Additionally, I created detailed developer documentation, including API references, architectural diagrams, and onboarding guides, to facilitate seamless maintenance and knowledge sharing within the team.",
+    "description": [
+      "Designed and implemented a microservice using Node.js and Express.js to analyze, predict, and measure patient mental health severity from questionnaire responses.",
+      "Collaborated on critical projects, resolving high-priority bugs and introducing new features to improve reliability and user experience for patients and doctors.",
+      "Optimized data storage in a NoSQL database, reducing storage and processing overhead by 40–45%, resulting in increased system efficiency.",
+      "Authored comprehensive developer documentation, including API references, architectural diagrams, and onboarding guides, to support knowledge sharing and streamline maintenance efforts."
+    ],
     "skills": [
       {
         "iconName": "Vue.Js",
@@ -53,7 +58,13 @@
     "org": "Highradius Technologies",
     "orgLink": "https://www.highradius.com/",
     "src": "/hrc2.png",
-    "description": "During my tenure, I architected and implemented over 50 user stories and resolved 150+ bugs for payment-based web applications, leveraging a full-stack ecosystem of React, ExtJS, Java Spring Boot, and JPA. I took on the role of Scrum Master for six months, leading Scrum meetings and ensuring adherence to Agile practices to boost team productivity. By optimizing REST API interactions with SQL server databases, I addressed resource overhead issues, achieving a 60% improvement in system performance while reducing API response times and cloud processor usage. I spearheaded the migration of B2B SaaS virtual card payment systems from legacy technologies like Spring MVC, Hibernate, and ExtJS to a modern stack with React and Spring Boot, integrating Java web services to enhance inter-application communication. Additionally, I introduced JUnit testing for backend projects and conducted training sessions to equip developers with best practices in testing and quality assurance.",
+    "description": [
+      "Architected and implemented over 50 user stories and resolved 150+ bugs for payment-based web applications using React, ExtJS, Java Spring Boot, and JPA.",
+      "Served as Scrum Master for six months, leading Scrum meetings and enforcing Agile practices to enhance team productivity.",
+      "Optimized REST API interactions with SQL server databases, reducing resource overhead and achieving a 60% improvement in system performance, including faster API response times and lower cloud processor usage.",
+      "Led the migration of B2B SaaS virtual card payment systems from legacy technologies (Spring MVC, Hibernate, ExtJS) to a modern stack with React and Spring Boot, integrating Java web services for seamless inter-application communication.",
+      "Introduced JUnit testing for backend projects and conducted training sessions to educate developers on testing best practices and quality assurance."
+    ],
     "skills": [
       {
         "iconName": "Java",
@@ -118,7 +129,12 @@
     "org": "Highradius Technologies",
     "orgLink": "https://www.highradius.com/",
     "src": "/Company-Overview-OG.png",
-    "description": "I developed a full-stack web application using React, SQL, and JDBC to streamline invoice management for B2B sellers. The application included robust features such as tracking invoice statuses (paid, rejected, delayed), initiating disputes, and maintaining detailed payment histories, providing users with an efficient tool for managing financial workflows. Additionally, I collaborated with client data to design a machine learning model that predicts customer churn and estimates accounts receivable based on historical credit purchase data, enabling businesses to make informed decisions and improve financial planning.",
+    "description": [
+      "Developed a full-stack web application using React, SQL, and JDBC to streamline invoice management for B2B sellers.",
+      "Implemented key features such as tracking invoice statuses (paid, rejected, delayed), initiating disputes, and maintaining payment histories to enhance financial workflows.",
+      "Collaborated with client data to design a machine learning model that predicts customer churn and estimates accounts receivable based on historical credit purchase data.",
+      "Enabled businesses to make data-driven decisions and improve financial planning through predictive insights on customer behavior and payment trends."
+    ],
     "skills": [
       {
         "iconName": "Python",
