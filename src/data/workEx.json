@@ -5,7 +5,48 @@
     "orgLink": "https://chokkacenter.com/",
     "src": "/chokka.png",
     "description": "At the clinic, I developed a microservice from the ground up using Node.js and Express.js to analyze, predict, and measure patient mental health severity based on their questionnaire responses, integrating it seamlessly into the existing software ecosystem. I collaborated on critical projects, addressing high-priority bugs and adding new features that significantly improved the reliability and user experience for both patients and doctors. By optimizing data storage in a NoSQL database, I reduced storage and processing overhead by 40–45%, enhancing the system's efficiency. Additionally, I created detailed developer documentation, including API references, architectural diagrams, and onboarding guides, to facilitate seamless maintenance and knowledge sharing within the team.",
-    "skills":[ "NodeJs", "ExpressJs", "VueJs", "BootstrapVue","CouchDB", "Microservices", "SQL", "NGINX", "Python", "Machine Learning"]
+    "skills": [
+      {
+        "iconName": "Vue.Js",
+        "hyperlink": "https://vuejs.org/"
+      },
+      {
+        "iconName": "BootstrapVue",
+        "hyperlink": "https://bootstrap-vue.org/"
+      },
+      {
+        "iconName": "MongoDB",
+        "hyperlink": "https://www.mongodb.com/"
+      },
+      {
+        "iconName": "Microservice",
+        "hyperlink": "https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices"
+      },
+      {
+        "iconName": "Postgresql",
+        "hyperlink": "https://www.postgresql.org/"
+      },
+      {
+        "iconName": "Express",
+        "hyperlink": "https://expressjs.com/"
+      },
+      {
+        "iconName": "NodeJs",
+        "hyperlink": "https://nodejs.org/en"
+      },
+      {
+        "iconName": "NGINX",
+        "hyperlink": "https://nginx.org/en/"
+      },
+      {
+        "iconName": "Python",
+        "hyperlink": "https://www.python.org/"
+      },
+      {
+        "iconName": "MachineLearning",
+        "hyperlink": "https://en.wikipedia.org/wiki/Machine_learning"
+      }
+    ]
   },
   {
     "title": "Associate Software Engineer - I",
@@ -13,7 +54,64 @@
     "orgLink": "https://www.highradius.com/",
     "src": "/hrc2.png",
     "description": "During my tenure, I architected and implemented over 50 user stories and resolved 150+ bugs for payment-based web applications, leveraging a full-stack ecosystem of React, ExtJS, Java Spring Boot, and JPA. I took on the role of Scrum Master for six months, leading Scrum meetings and ensuring adherence to Agile practices to boost team productivity. By optimizing REST API interactions with SQL server databases, I addressed resource overhead issues, achieving a 60% improvement in system performance while reducing API response times and cloud processor usage. I spearheaded the migration of B2B SaaS virtual card payment systems from legacy technologies like Spring MVC, Hibernate, and ExtJS to a modern stack with React and Spring Boot, integrating Java web services to enhance inter-application communication. Additionally, I introduced JUnit testing for backend projects and conducted training sessions to equip developers with best practices in testing and quality assurance.",
-    "skills":[ "Java", "Spring Boot", "Typescript", "React", "Redux", "Junit", "Git", "Jira", "ExtJS", "SQL","Python", "Docker", "CI/CD Pipeline"]
+    "skills": [
+      {
+        "iconName": "Java",
+        "hyperlink": "https://www.java.com/en/"
+      },
+      {
+        "iconName": "Spring_Boot",
+        "hyperlink": "https://spring.io/projects/spring-boot"
+      },
+      {
+        "iconName": "Junit",
+        "hyperlink": "https://junit.org/junit5/"
+      },
+      {
+        "iconName": "Typescript",
+        "hyperlink": "https://www.typescriptlang.org/"
+      },
+      {
+        "iconName": "React.Js",
+        "hyperlink": "https://react.dev/"
+      },
+      {
+        "iconName": "Redux",
+        "hyperlink": "https://redux.js.org/"
+      },
+      {
+        "iconName": "Git",
+        "hyperlink": "https://git-scm.com/"
+      },
+      {
+        "iconName": "Agile",
+        "hyperlink": "https://www.atlassian.com/agile"
+      },
+      {
+        "iconName": "Jira",
+        "hyperlink": "https://www.atlassian.com/software/jira"
+      },
+      {
+        "iconName": "Python",
+        "hyperlink": "https://www.python.org/"
+      },
+      {
+        "iconName": "ExtJs",
+        "hyperlink": "https://www.sencha.com/products/extjs/"
+      },
+      {
+        "iconName": "Postgresql",
+        "hyperlink": "https://www.postgresql.org/"
+      },
+      {
+        "iconName": "Docker",
+        "hyperlink": "https://www.docker.com/"
+      },
+      {
+        "iconName": "Cicd",
+        "hyperlink": "https://about.gitlab.com/topics/ci-cd/"
+      }
+    ]
   },
   {
     "title": "Software Developer Intern",
@@ -21,6 +119,31 @@
     "orgLink": "https://www.highradius.com/",
     "src": "/Company-Overview-OG.png",
     "description": "I developed a full-stack web application using React, SQL, and JDBC to streamline invoice management for B2B sellers. The application included robust features such as tracking invoice statuses (paid, rejected, delayed), initiating disputes, and maintaining detailed payment histories, providing users with an efficient tool for managing financial workflows. Additionally, I collaborated with client data to design a machine learning model that predicts customer churn and estimates accounts receivable based on historical credit purchase data, enabling businesses to make informed decisions and improve financial planning.",
-    "skills":[ "python", "Java", "JDBC", "Eclipse", "Javascript", "React", "Redux", "ML", "AI", "Numpy", "Pandas", "Matplotlib"]
+    "skills": [
+      {
+        "iconName": "Python",
+        "hyperlink": "https://www.python.org/"
+      },
+      {
+        "iconName": "Java",
+        "hyperlink": "https://www.java.com/en/"
+      },
+      {
+        "iconName": "Typescript",
+        "hyperlink": "https://www.typescriptlang.org/"
+      },
+      {
+        "iconName": "React.Js",
+        "hyperlink": "https://react.dev/"
+      },
+      {
+        "iconName": "Redux",
+        "hyperlink": "https://redux.js.org/"
+      },
+      {
+        "iconName": "MachineLearning",
+        "hyperlink": "https://en.wikipedia.org/wiki/Machine_learning"
+      }
+    ]
   }
 ]

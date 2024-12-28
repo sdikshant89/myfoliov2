@@ -1,6 +1,10 @@
 import { Timeline } from '@/components/ui/timeline';
+import { skillIconMap } from '@/data/SkillIconMap';
 import contentJson from '@/data/workEx.json';
+import ExIcon from '@/icons/exclamation.png';
 import { motion } from 'framer-motion';
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 type content = {
   title: string;
@@ -8,8 +12,17 @@ type content = {
   org: string;
   orgLink: string;
   src: string;
-  skills: string[];
+  skills: nestedSkillArrType[];
 };
+
+type nestedSkillArrType = {
+  iconName: string;
+  hyperlink: string;
+};
+
+function getSkillIcon(name: string): StaticImageData {
+  return skillIconMap[name] || ExIcon;
+}
 
 function createJobDesc(itemIndex: number) {
   const contentArr: content[] = contentJson;
@@ -41,15 +54,20 @@ function createJobDesc(itemIndex: number) {
       <p className="text-md dark:text-slate-300 text-blue-600 mt-4">
         {item.description}
       </p>
-      <div className="pt-4 justify-start items-center">
-        {item.skills.map((skill, skillIndex) => (
-          <button
-            disabled
-            key={`${item.title}-skill-${skillIndex}`}
-            className="px-3 py-1 mr-2 mt-2 rounded-lg border border-gray-600 dark:text-white text-black"
+      <div className="pt-4 w-full flex flex-wrap justify-start items-center">
+        {item.skills.map((skillItem, skillIndex) => (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={skillItem.hyperlink}
+            className="mx-6 my-3"
           >
-            {skill}
-          </button>
+            <Image
+              src={getSkillIcon(skillItem.iconName.replace(/[_\.]/g, ''))}
+              alt="Python"
+              className="w-6 h-6 hover:w-8 hover:h-8 transition-all duration-300"
+            />
+          </a>
         ))}
       </div>
     </motion.div>

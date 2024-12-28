@@ -12,15 +12,21 @@ import UnityIcon from '@/icons/skills/unity.png';
 import VSCodeIcon from '@/icons/skills/visualStudio.png';
 import VueIcon from '@/icons/skills/Vue.png';
 import type { StaticImageData } from 'next/image';
+import BoostrapVueIcon from '../icons/skills/bootstrapvue.png';
+import CicdIcon from '../icons/skills/cicd.png';
 import CSSIcon from '../icons/skills/css.png';
+import DockerIcon from '../icons/skills/docker.png';
 import ExtIcon from '../icons/skills/extjs.png';
 import FigmaIcon from '../icons/skills/figma.png';
 import GitIcon from '../icons/skills/git.png';
 import HTMLIcon from '../icons/skills/html.png';
 import JiraIcon from '../icons/skills/jira.png';
 import JSIcon from '../icons/skills/js.png';
+import MLIcon from '../icons/skills/machineLearning.png';
 import MatlabIcon from '../icons/skills/matlab.png';
+import MicroServiceIcon from '../icons/skills/microservice.png';
 import NextIcon from '../icons/skills/nextjs.png';
+import NginxIcon from '../icons/skills/nginx.png';
 import ReactIcon from '../icons/skills/react.png';
 import ReduxIcon from '../icons/skills/redux.png';
 import SpIcon from '../icons/skills/springBoot.png';
@@ -39,6 +45,7 @@ export const skillIconMap: Record<string, StaticImageData> = {
   TailwindCSS: TailwindIcon,
   CSS: CSSIcon,
   ExtJs: ExtIcon,
+  BootstrapVue: BoostrapVueIcon,
 
   //Backend
   Express: ExpIcon,
@@ -61,4 +68,9 @@ export const skillIconMap: Record<string, StaticImageData> = {
   VisualStudio: VSCodeIcon,
   MATLAB: MatlabIcon,
   Jira: JiraIcon,
+  Microservice: MicroServiceIcon,
+  NGINX: NginxIcon,
+  MachineLearning: MLIcon,
+  Docker: DockerIcon,
+  Cicd: CicdIcon,
 };
