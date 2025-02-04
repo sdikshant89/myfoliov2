@@ -1,5 +1,6 @@
 'use client';
 
+import Certifications from '@/components/Certifications';
 import EducationSection from '@/components/EduSection';
 import Footer from '@/components/Footer';
 import IntroSection from '@/components/IntroSection';
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="min-h-screen bg-black antialiased">
       <IntroSection />
       <WorkExSectionV2 />
+      <Certifications />
       <SkillsSection />
       <EducationSection />
       <Footer scrollToSection={scrollToSection} />

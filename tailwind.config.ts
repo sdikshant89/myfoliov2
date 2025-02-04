@@ -1,51 +1,77 @@
 const {
   default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+} = require('tailwindcss/lib/util/flattenColorPalette');
+const plugin = require('tailwindcss/plugin');
+
+type UtilitiesFunction = (
+  utilities: Record<string, Record<string, string>>
+) => void;
+
+const Myclass = plugin(function ({
+  addUtilities,
+}: {
+  addUtilities: UtilitiesFunction;
+}) {
+  addUtilities({
+    '.my-rotate-y-180': {
+      transform: 'rotateY(180deg)',
+    },
+    '.preserve-3d': {
+      transformStyle: 'preserve-3d',
+    },
+    '.perspective': {
+      perspective: '1000px',
+    },
+    '.backface-hidden': {
+      backfaceVisibility: 'hidden',
+    },
+  });
+});
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Sen','Poppins', 'sans-serif'],
+        sans: ['Sen', 'Poppins', 'sans-serif'],
       },
       fontWeight: {
-        medium: "500",
-        semibold: "600",
-        bold: "700",
-        extrabold: "800"
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
       },
       animation: {
-        spotlight: "spotlight 2s ease .75s 1 forwards",
-        aurora: "aurora 60s linear infinite",
+        spotlight: 'spotlight 2s ease .75s 1 forwards',
+        aurora: 'aurora 60s linear infinite',
       },
       keyframes: {
         spotlight: {
-          "0%": {
-            opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
+          '0%': {
+            opacity: '0',
+            transform: 'translate(-72%, -62%) scale(0.5)',
           },
-          "100%": {
+          '100%': {
             opacity: '1',
-            transform: "translate(-50%,-40%) scale(1)",
+            transform: 'translate(-50%,-40%) scale(1)',
           },
         },
         aurora: {
           from: {
-            backgroundPosition: "50% 50%, 50% 50%",
+            backgroundPosition: '50% 50%, 50% 50%',
           },
           to: {
-            backgroundPosition: "350% 50%, 350% 50%",
+            backgroundPosition: '350% 50%, 350% 50%',
           },
         },
       },
@@ -54,16 +80,16 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, Myclass],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
+  let allColors = flattenColorPalette(theme('colors'));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
-    ":root": newVars,
+    ':root': newVars,
   });
 }
