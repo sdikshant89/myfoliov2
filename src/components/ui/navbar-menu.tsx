@@ -28,8 +28,7 @@ function getIcon(item: string): StaticImageData {
 const BottomGradient = () => {
   return (
     <>
-      <span className="block absolute h-1 w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="blur-sm block absolute h-1 w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+      <span className="block absolute h-1 w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-indigo-600 to-transparent" />
     </>
   );
 };

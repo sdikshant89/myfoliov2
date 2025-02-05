@@ -35,12 +35,24 @@ function Certifications() {
                 />
               </div>
               <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-transparent overflow-hidden flex flex-col justify-center items-center gap-y-4">
-                <button className="bg-indigo-500 rounded-lg p-3 font-medium hover:bg-indigo-700 transition-all duration-300">
-                  View Certificate
-                </button>
-                <button className="bg-white rounded-lg p-3 font-medium hover:bg-slate-300 transition-all duration-300 text-black">
-                  Download Notes
-                </button>
+                <a
+                  href="/AWS_practitioner.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-indigo-500 rounded-lg p-3 font-medium hover:bg-indigo-700 transition-all duration-300">
+                    View Certificate
+                  </button>
+                </a>
+                <a
+                  href="/AWS_practitioner_notes.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-white rounded-lg p-3 font-medium hover:bg-slate-300 transition-all duration-300 text-black">
+                    Download Notes
+                  </button>
+                </a>
               </div>
             </div>
             <h1 className="text-center text-lg mt-5">AWS CLF-C02</h1>

@@ -150,7 +150,7 @@ function ContactPage() {
         method="POST"
         data-netlify="true"
         onSubmit={handleSubmit}
-        className="z-10 p-4 md:p-8 w-4/5 md:w-2/5 bg-black/50 rounded-2xl"
+        className="z-10 p-4 md:p-8 w-4/5 md:w-6/12 bg-black/50 rounded-2xl"
       >
         <input type="hidden" name="form-name" value="ContactMe" />
         <WordRotate
