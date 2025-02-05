@@ -21,8 +21,10 @@ function Certifications() {
             Certifications
           </h3>
           <h1 className="pt-2 text-center text-white text-4xl md:text-6xl font-bold">
-            Stamps of Approval
+            My Certified Receipts
           </h1>
+        </div>
+        <div className="flex justify-center items-center">
           <div className="flex flex-col justify-center items-center my-12 group">
             <div className="relative preserve-3d group-hover:my-rotate-y-180  duration-1000 w-52 h-52">
               <div className="absolute backface-hidden w-full h-full">
@@ -32,8 +34,13 @@ function Certifications() {
                   className="w-full cursor-pointer"
                 />
               </div>
-              <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-transparent overflow-hidden">
-                Yooo
+              <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-transparent overflow-hidden flex flex-col justify-center items-center gap-y-4">
+                <button className="bg-indigo-500 rounded-lg p-3 font-medium hover:bg-indigo-700 transition-all duration-300">
+                  View Certificate
+                </button>
+                <button className="bg-white rounded-lg p-3 font-medium hover:bg-slate-300 transition-all duration-300 text-black">
+                  Download Notes
+                </button>
               </div>
             </div>
             <h1 className="text-center text-lg mt-5">AWS CLF-C02</h1>
@@ -41,6 +48,7 @@ function Certifications() {
               Febraury 2025
             </h1>
           </div>
+          {/* other certifications here */}
         </div>
       </motion.div>
     </div>

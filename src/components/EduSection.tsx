@@ -4,12 +4,7 @@ import UofAIcon from '@/icons/UofA.png';
 import KIITIcon from '@/icons/kiitLogo.png';
 import { cn } from '@/utils/cn';
 import { motion } from 'framer-motion';
-// import dynamic from 'next/dynamic';
 import Image from 'next/image';
-// const BackgroundBeams = dynamic(
-//   () => import('./ui/background-beams').then((mod) => mod.BackgroundBeams),
-//   { ssr: false }
-// );
 
 interface BlurIntProps {
   word: string;
@@ -51,8 +46,6 @@ const BlurIn = ({
 };
 
 function EducationSection() {
-  //const isMediumOrLarger = useMediaQuery({ query: '(min-width: 768px)' });
-
   return (
     <motion.div
       initial={{ opacity: 0.0, y: 40 }}
@@ -117,7 +110,6 @@ function EducationSection() {
           />
         </div>
       </div>
-      {/* {isMediumOrLarger && <BackgroundBeams />} */}
     </motion.div>
   );
 }
